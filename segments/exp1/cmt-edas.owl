@@ -1,0 +1,24 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:s="http://cin.ufpe.br/dass/soma/segments/#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="http://cin.ufpe.br/dass/soma/segments/#segment"/>
+  <owl:Class rdf:about="http://cin.ufpe.br/dass/soma/segments/#segmentPair">
+    <rdfs:subClassOf rdf:resource="http://cin.ufpe.br/dass/soma/segments/#segment"/>
+  </owl:Class>
+  <s:segment rdf:about="http://cin.ufpe.br/dass/soma/segments/#classSegmentPairSource">
+    <s:source>http://cin.ufpe.br/dass/soma/segments/#http://cmt#ConferenceChair</s:source>
+    <s:source>http://cin.ufpe.br/dass/soma/segments/#http://cmt#Co-author</s:source>
+    <s:target>http://cin.ufpe.br/dass/soma/segments/#http://edas#PersonalHistory</s:target>
+    <s:target>http://cin.ufpe.br/dass/soma/segments/#http://edas#ConferenceChair</s:target>
+    <s:source>http://cin.ufpe.br/dass/soma/segments/#http://cmt#AuthorNotReviewer</s:source>
+    <s:source>http://cin.ufpe.br/dass/soma/segments/#http://cmt#ProgramCommitteeChair</s:source>
+    <s:source>http://cin.ufpe.br/dass/soma/segments/#http://cmt#AssociatedChair</s:source>
+    <s:source>http://cin.ufpe.br/dass/soma/segments/#http://cmt#ProgramCommitteeMember</s:source>
+    <s:source>http://cin.ufpe.br/dass/soma/segments/#http://cmt#Author</s:source>
+    <s:source>http://cin.ufpe.br/dass/soma/segments/#http://cmt#Chairman</s:source>
+    <s:source>http://cin.ufpe.br/dass/soma/segments/#http://cmt#ConferenceMember</s:source>
+  </s:segment>
+</rdf:RDF>

@@ -1,0 +1,27 @@
+[{
+  "id" : "req1",
+  "constraints" : {
+    "class-info/name": "Participant",
+    "class-info/axioms/sub-class-of": "Person",
+    "property-info/name": "given presentation",
+    "property-info/domain": "Participant"
+  }
+},
+{
+  "id" : "req2",
+  "constraints" : {
+    "class-info/name" : "Chair",
+    "class-info/axioms/sub-class-of" : "Committee",
+    "property-info/name" : "Review",
+    "property-info/domain" : "Chair"
+  }
+},
+{
+  "id" : "req3",
+  "constraints" : {
+    "class-info/name" : "Document",
+    "property-info/domain" : "Document",
+    "property-info/is-datatype" : "true",
+    "property-info/range" : "xsd:date"
+  }
+}]

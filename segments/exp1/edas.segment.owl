@@ -1,0 +1,2645 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:p1="http://www.owl-ontologies.com/assert.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://edas#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://edas">
+    <rdfs:comment>EDAS Conference Menagement Ontology (for 4iz440)</rdfs:comment>
+    <owl:versionInfo>1.5</owl:versionInfo>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://edas#Call">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewForm"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Conference"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PersonalHistory"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewQuestion"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewRating"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Document"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Topic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Place"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceEvent"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Sponsorship"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Country"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceSession"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ContactInformation"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Organization"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Place">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Call"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Organization"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Document"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ContactInformation"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewForm"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewQuestion"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Country"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Sponsorship"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceEvent"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PersonalHistory"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceSession"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Conference"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Topic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewRating"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Reception">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#SocialEvent"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#RadioCommunicationsTopic">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MicroelectronicsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationTheoryTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#TestOnlyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SignalProcessingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MedicineTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PowerlineTransmissionTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MultimediaTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#WirelessCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CADTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerArchitectureTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#OperatingTopicsystems"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ParallelAndDistributedComputingTopic"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Topic"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MobileComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SecurityTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AntennasTopic"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#TwoLevelConference">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://edas#Conference"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://edas#hasMember"/>
+            </owl:onProperty>
+            <owl:allValuesFrom>
+              <owl:Class rdf:about="http://edas#Person"/>
+            </owl:allValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="http://edas#TPCMember"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://edas#hasMember"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Review">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Document"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MealMenu"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Paper"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Programme"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SlideSet"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#WeekRejectRating">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#RejectRating"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AccpetIfRoomRating"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AcceptRating"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#ReviewRating"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#FreeTimeBreak">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#BreakEvent"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#RejectedPaper">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Paper"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PublishedPaper"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AcceptedPaper"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#WithdrawnPaper"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ActivePaper"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PendingPaper"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#MealBreak">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#BreakEvent"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#AcademiaOrganization">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Organization"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#GovernmentOrganization"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#NGO"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#IndustryOrganization"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Presenter">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Author"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#TestOnlyTopic">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CADTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerArchitectureTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ParallelAndDistributedComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#OperatingTopicsystems"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MicroelectronicsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MobileComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationTheoryTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MultimediaTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PowerlineTransmissionTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Topic"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#WirelessCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MedicineTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AntennasTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SecurityTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SignalProcessingTopic"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#TPCMember">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Person"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Author"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Sponsorship">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewForm"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Conference"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Organization"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceEvent"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Place"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewRating"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Topic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Document"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Country"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Call"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceSession"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ContactInformation"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PersonalHistory"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewQuestion"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#MedicineTopic">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ParallelAndDistributedComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MultimediaTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SecurityTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#WirelessCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationTheoryTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MobileComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PowerlineTransmissionTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CADTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Topic"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SignalProcessingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#OperatingTopicsystems"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerArchitectureTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AntennasTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MicroelectronicsTopic"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#CADTopic">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerArchitectureTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AntennasTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SignalProcessingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MicroelectronicsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#WirelessCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PowerlineTransmissionTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MobileComputingTopic"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Topic"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#OperatingTopicsystems"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationTheoryTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ParallelAndDistributedComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SecurityTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MultimediaTopic"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Attendee">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ReviewRating">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Organization"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ContactInformation"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PersonalHistory"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Place"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Country"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewQuestion"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Call"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceEvent"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewForm"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Document"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Conference"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Topic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceSession"/>
+    </owl:disjointWith>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://edas#AcceptRating"/>
+          <owl:Class rdf:about="http://edas#AccpetIfRoomRating"/>
+          <owl:Class rdf:about="http://edas#RejectRating"/>
+          <owl:Class rdf:about="http://edas#WeekRejectRating"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#GovernmentOrganization">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Organization"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://edas#AcademiaOrganization"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#IndustryOrganization"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#NGO"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#PersonalPublicationHistory">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#PersonalHistory"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ReviewForm">
+    <owl:disjointWith rdf:resource="http://edas#Place"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PersonalHistory"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Organization"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Call"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewQuestion"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Country"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceSession"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Topic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceEvent"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ContactInformation"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Document"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Conference"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#MultimediaTopic">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Topic"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ParallelAndDistributedComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MicroelectronicsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#WirelessCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AntennasTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#CADTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SecurityTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SignalProcessingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationTheoryTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PowerlineTransmissionTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#OperatingTopicsystems"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MobileComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerArchitectureTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ConferenceSession">
+    <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
+    <owl:disjointWith rdf:resource="http://edas#Place"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Document"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewQuestion"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ContactInformation"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Country"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ReviewForm"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PersonalHistory"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Topic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Conference"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Organization"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Call"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceEvent"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Conference">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://edas#hasCountry"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ContactInformation"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ReviewForm"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewQuestion"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Organization"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://edas#hasName"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PersonalHistory"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://edas#startDate"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Paper"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ConferenceSession"/>
+    <owl:disjointWith rdf:resource="http://edas#Place"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://edas#endDate"/>
+        </owl:onProperty>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Country"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Topic"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://edas#registrationDueOn"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Person"/>
+    </owl:disjointWith>
+    <rdfs:comment>Conference</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceEvent"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://edas#paperDueOn"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://edas#Call"/>
+    <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://edas#hasTopic"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <owl:versionInfo>OWLUnitTest:&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;OWLUnitTest enabled="true" satisfiable="true"&gt;
+    &lt;superclasses/&gt;
+    &lt;subclasses/&gt;
+    &lt;comment/&gt;
+&lt;/OWLUnitTest&gt;
+</owl:versionInfo>
+      </rdf:Description>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://edas#manuscriptDueOn"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Document"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ComputerNetworksSwitchingTopic">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksAapplicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksEnterpriseTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksManagementTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksMeasurementsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksOpticalTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksSecurityTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksSensorTopic"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ComputerNetworksOpticalTopic">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksAapplicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksEnterpriseTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksManagementTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksMeasurementsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksSecurityTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksSensorTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksSwitchingTopic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#PublishedPaper">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AcceptedPaper"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#RejectedPaper"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#WithdrawnPaper"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ActivePaper"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PendingPaper"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Paper"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ComputerNetworksMeasurementsTopic">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksAapplicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksEnterpriseTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksManagementTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksOpticalTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksSecurityTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksSensorTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksSwitchingTopic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#NonAcademicEvent">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AcademicEvent"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#ConferenceEvent"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#CommunicationsTopic">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AntennasTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MobileComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerArchitectureTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#WirelessCommunicationsTopic"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Topic"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://edas#MultimediaTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#OperatingTopicsystems"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ParallelAndDistributedComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MicroelectronicsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SecurityTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationTheoryTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PowerlineTransmissionTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SignalProcessingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#CADTopic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#PaperPresentation">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#OrganizationalMeeting"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Workshop"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#TalkEvent"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#AcademicEvent"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#MeetingRoomPlace">
+    <rdfs:subClassOf rdf:resource="http://edas#Place"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#WithdrawnPaper">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Paper"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://edas#PublishedPaper"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AcceptedPaper"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#RejectedPaper"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ActivePaper"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PendingPaper"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Document">
+    <owl:disjointWith rdf:resource="http://edas#Place"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewQuestion"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceEvent"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PersonalHistory"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ConferenceSession"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Topic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Call"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Country"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Conference"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ContactInformation"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
+    <owl:disjointWith rdf:resource="http://edas#ReviewForm"/>
+    <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Organization"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#PersonalHistory">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Country"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Place"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewQuestion"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Document"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Organization"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Topic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceEvent"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
+    <owl:disjointWith rdf:resource="http://edas#Conference"/>
+    <owl:disjointWith rdf:resource="http://edas#ReviewForm"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ContactInformation"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Call"/>
+    <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ConferenceSession"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#SecurityTopic">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MultimediaTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#CADTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#OperatingTopicsystems"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PowerlineTransmissionTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AntennasTopic"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Topic"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MicroelectronicsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerArchitectureTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MobileComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#WirelessCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SignalProcessingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationTheoryTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ParallelAndDistributedComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#CommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Topic">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Country"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceEvent"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ContactInformation"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Place"/>
+    <owl:disjointWith rdf:resource="http://edas#ConferenceSession"/>
+    <owl:disjointWith rdf:resource="http://edas#PersonalHistory"/>
+    <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
+    <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
+    <owl:disjointWith rdf:resource="http://edas#Call"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Organization"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Document"/>
+    <owl:disjointWith rdf:resource="http://edas#ReviewForm"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewQuestion"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Conference"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#CallForPapers">
+    <rdfs:subClassOf rdf:resource="http://edas#Call"/>
+    <rdfs:comment>Call For Papers</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Organization">
+    <owl:disjointWith rdf:resource="http://edas#ConferenceSession"/>
+    <owl:disjointWith rdf:resource="http://edas#Topic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceEvent"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#PersonalHistory"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ContactInformation"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Place"/>
+    <owl:disjointWith rdf:resource="http://edas#ReviewForm"/>
+    <owl:disjointWith rdf:resource="http://edas#Conference"/>
+    <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Country"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewQuestion"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Call"/>
+    <owl:disjointWith rdf:resource="http://edas#Document"/>
+    <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ComputerNetworksSensorTopic">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksAapplicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksEnterpriseTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksManagementTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksMeasurementsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksOpticalTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksSecurityTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksSwitchingTopic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Author">
+    <owl:disjointWith rdf:resource="http://edas#TPCMember"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SessionChair"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceChair"/>
+    </owl:disjointWith>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://edas#hasRelatedDocument"/>
+            </owl:onProperty>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="http://edas#Paper"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Class rdf:about="http://edas#Person"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#AcceptedPaper">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Paper"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://edas#PublishedPaper"/>
+    <owl:disjointWith rdf:resource="http://edas#RejectedPaper"/>
+    <owl:disjointWith rdf:resource="http://edas#WithdrawnPaper"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ActivePaper"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PendingPaper"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#AcademicEvent">
+    <owl:disjointWith rdf:resource="http://edas#NonAcademicEvent"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#ConferenceEvent"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ComputerNetworksManagementTopic">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksAapplicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksEnterpriseTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksMeasurementsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksOpticalTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksSecurityTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksSensorTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksSwitchingTopic"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#AcceptRating">
+    <rdfs:subClassOf rdf:resource="http://edas#ReviewRating"/>
+    <owl:disjointWith rdf:resource="http://edas#WeekRejectRating"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#RejectRating"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AccpetIfRoomRating"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#PowerlineTransmissionTopic">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerArchitectureTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#WirelessCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MicroelectronicsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SecurityTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#OperatingTopicsystems"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SignalProcessingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MultimediaTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CADTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ParallelAndDistributedComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AntennasTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MobileComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationTheoryTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://edas#Topic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#SlideSet">
+    <rdfs:subClassOf rdf:resource="http://edas#Document"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MealMenu"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Paper"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Programme"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Review"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#OperatingTopicsystems">
+    <owl:disjointWith rdf:resource="http://edas#CADTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SecurityTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#PowerlineTransmissionTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CommunicationsTopic"/>
+    <rdfs:subClassOf rdf:resource="http://edas#Topic"/>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AntennasTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ParallelAndDistributedComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#WirelessCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationTheoryTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SignalProcessingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MobileComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerArchitectureTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MultimediaTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MicroelectronicsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#MicroelectronicsTopic">
+    <rdfs:subClassOf rdf:resource="http://edas#Topic"/>
+    <owl:disjointWith rdf:resource="http://edas#OperatingTopicsystems"/>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#PowerlineTransmissionTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationTheoryTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#CommunicationsTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AntennasTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#SecurityTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerArchitectureTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MobileComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MultimediaTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ParallelAndDistributedComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#WirelessCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CADTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SignalProcessingTopic"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#PendingPaper">
+    <owl:disjointWith rdf:resource="http://edas#PublishedPaper"/>
+    <owl:disjointWith rdf:resource="http://edas#AcceptedPaper"/>
+    <owl:disjointWith rdf:resource="http://edas#RejectedPaper"/>
+    <owl:disjointWith rdf:resource="http://edas#WithdrawnPaper"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ActivePaper"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Paper"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#RatedPapers">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#ActivePaper"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://edas#hasRating"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://edas#ReviewRating"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Excursion">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#SocialEvent"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#SignalProcessingTopic">
+    <rdfs:subClassOf rdf:resource="http://edas#Topic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#WirelessCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationTheoryTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MicroelectronicsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CommunicationsTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MobileComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MultimediaTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SecurityTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ParallelAndDistributedComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AntennasTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#CADTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#PowerlineTransmissionTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerArchitectureTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#OperatingTopicsystems"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Workshop">
+    <rdfs:subClassOf rdf:resource="http://edas#AcademicEvent"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#OrganizationalMeeting"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#PaperPresentation"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#TalkEvent"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#TravelGrant">
+    <rdfs:subClassOf rdf:resource="http://edas#Sponsorship"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ContactInformation">
+    <owl:disjointWith rdf:resource="http://edas#Organization"/>
+    <owl:disjointWith rdf:resource="http://edas#Place"/>
+    <owl:disjointWith rdf:resource="http://edas#ConferenceSession"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ReviewQuestion"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Conference"/>
+    <owl:disjointWith rdf:resource="http://edas#PersonalHistory"/>
+    <owl:disjointWith rdf:resource="http://edas#ReviewForm"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceEvent"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Call"/>
+    <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Country"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
+    <owl:disjointWith rdf:resource="http://edas#Document"/>
+    <owl:disjointWith rdf:resource="http://edas#Topic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ReviewQuestion">
+    <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
+    <owl:disjointWith rdf:resource="http://edas#Document"/>
+    <owl:disjointWith rdf:resource="http://edas#Conference"/>
+    <owl:disjointWith rdf:resource="http://edas#ConferenceSession"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceEvent"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Topic"/>
+    <owl:disjointWith rdf:resource="http://edas#Call"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ContactInformation"/>
+    <owl:disjointWith rdf:resource="http://edas#PersonalHistory"/>
+    <owl:disjointWith rdf:resource="http://edas#Organization"/>
+    <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
+    <owl:disjointWith rdf:resource="http://edas#ReviewForm"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Country"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Place"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ActivePaper">
+    <owl:disjointWith rdf:resource="http://edas#PublishedPaper"/>
+    <owl:disjointWith rdf:resource="http://edas#AcceptedPaper"/>
+    <owl:disjointWith rdf:resource="http://edas#RejectedPaper"/>
+    <owl:disjointWith rdf:resource="http://edas#WithdrawnPaper"/>
+    <owl:disjointWith rdf:resource="http://edas#PendingPaper"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Paper"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#BreakEvent">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://edas#CoffeeBreak"/>
+          <owl:Class rdf:about="http://edas#FreeTimeBreak"/>
+          <owl:Class rdf:about="http://edas#MealBreak"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MealEvent"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://edas#NonAcademicEvent"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#SatelliteAndSpaceCommunicationsTopic">
+    <owl:disjointWith rdf:resource="http://edas#MicroelectronicsTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerArchitectureTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#CADTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#OperatingTopicsystems"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#WirelessCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#PowerlineTransmissionTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MultimediaTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+    <rdfs:subClassOf rdf:resource="http://edas#Topic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#SignalProcessingTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AntennasTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ParallelAndDistributedComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MobileComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#SecurityTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationTheoryTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#CommunicationsTopic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#PersonalReviewHistory">
+    <rdfs:subClassOf rdf:resource="http://edas#PersonalHistory"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ConferenceVenuePlace">
+    <rdfs:subClassOf rdf:resource="http://edas#Place"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#AccpetIfRoomRating">
+    <owl:disjointWith rdf:resource="http://edas#WeekRejectRating"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#RejectRating"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#AcceptRating"/>
+    <rdfs:subClassOf rdf:resource="http://edas#ReviewRating"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#OrganizationalMeeting">
+    <rdfs:subClassOf rdf:resource="http://edas#AcademicEvent"/>
+    <owl:disjointWith rdf:resource="http://edas#Workshop"/>
+    <owl:disjointWith rdf:resource="http://edas#PaperPresentation"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#TalkEvent"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Country">
+    <owl:disjointWith rdf:resource="http://edas#ReviewForm"/>
+    <owl:disjointWith rdf:resource="http://edas#Call"/>
+    <owl:disjointWith rdf:resource="http://edas#PersonalHistory"/>
+    <owl:disjointWith rdf:resource="http://edas#Conference"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceEvent"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Organization"/>
+    <owl:disjointWith rdf:resource="http://edas#Document"/>
+    <owl:disjointWith rdf:resource="http://edas#Topic"/>
+    <owl:disjointWith rdf:resource="http://edas#ReviewQuestion"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ConferenceSession"/>
+    <owl:disjointWith rdf:resource="http://edas#ContactInformation"/>
+    <owl:disjointWith rdf:resource="http://edas#Place"/>
+    <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
+    <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#IndustryOrganization">
+    <owl:disjointWith rdf:resource="http://edas#GovernmentOrganization"/>
+    <owl:disjointWith rdf:resource="http://edas#AcademiaOrganization"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#NGO"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://edas#Organization"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#MobileComputingTopic">
+    <owl:disjointWith rdf:resource="http://edas#PowerlineTransmissionTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ParallelAndDistributedComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SignalProcessingTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerArchitectureTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AntennasTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#CADTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#WirelessCommunicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MicroelectronicsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#OperatingTopicsystems"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationTheoryTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MultimediaTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SecurityTopic"/>
+    <rdfs:subClassOf rdf:resource="http://edas#Topic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#MealEvent">
+    <owl:disjointWith rdf:resource="http://edas#BreakEvent"/>
+    <rdfs:subClassOf rdf:resource="http://edas#NonAcademicEvent"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#WirelessCommunicationsTopic">
+    <owl:disjointWith rdf:resource="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#OperatingTopicsystems"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ParallelAndDistributedComputingTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#CommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#PowerlineTransmissionTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SecurityTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MicroelectronicsTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerArchitectureTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AntennasTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationTheoryTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SignalProcessingTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MultimediaTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MobileComputingTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CADTopic"/>
+    <rdfs:subClassOf rdf:resource="http://edas#Topic"/>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ComputerNetworksSecurityTopic">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksAapplicationsTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksEnterpriseTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksManagementTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksMeasurementsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksOpticalTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksSensorTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksSwitchingTopic"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ParallelAndDistributedComputingTopic">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#PowerlineTransmissionTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SecurityTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerArchitectureTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MicroelectronicsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SignalProcessingTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#AntennasTopic"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://edas#Topic"/>
+    <owl:disjointWith rdf:resource="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#MobileComputingTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MultimediaTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CADTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationTheoryTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#OperatingTopicsystems"/>
+    <owl:disjointWith rdf:resource="http://edas#WirelessCommunicationsTopic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#CallForManuscripts">
+    <rdfs:subClassOf rdf:resource="http://edas#Call"/>
+    <rdfs:comment>Call For Manuscripts</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Paper">
+    <owl:disjointWith rdf:resource="http://edas#Conference"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#MealMenu"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Programme"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Review"/>
+    <owl:disjointWith rdf:resource="http://edas#SlideSet"/>
+    <rdfs:subClassOf rdf:resource="http://edas#Document"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#AccommodationPlace">
+    <rdfs:subClassOf rdf:resource="http://edas#Place"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#CoffeeBreak">
+    <rdfs:subClassOf rdf:resource="http://edas#BreakEvent"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#NumericalReviewQuestion">
+    <rdfs:subClassOf rdf:resource="http://edas#ReviewQuestion"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#SingleLevelConference">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://edas#Conference"/>
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class rdf:about="http://edas#Person"/>
+            </owl:allValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://edas#hasMember"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:complementOf rdf:resource="http://edas#TwoLevelConference"/>
+          </owl:Class>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Reviewer">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://edas#isReviewing"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://edas#Paper"/>
+          </owl:Restriction>
+          <owl:Class rdf:about="http://edas#Person"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#SessionChair">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#Person"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://edas#Author"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ComputerNetworksAapplicationsTopic">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksEnterpriseTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksManagementTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksMeasurementsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksOpticalTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksSecurityTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksSensorTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksSwitchingTopic"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#MealMenu">
+    <rdfs:subClassOf rdf:resource="http://edas#Document"/>
+    <owl:disjointWith rdf:resource="http://edas#Paper"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#Programme"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#Review"/>
+    <owl:disjointWith rdf:resource="http://edas#SlideSet"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#SocialEvent">
+    <rdfs:subClassOf rdf:resource="http://edas#NonAcademicEvent"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Programme">
+    <rdfs:subClassOf rdf:resource="http://edas#Document"/>
+    <owl:disjointWith rdf:resource="http://edas#MealMenu"/>
+    <owl:disjointWith rdf:resource="http://edas#Paper"/>
+    <owl:disjointWith rdf:resource="http://edas#Review"/>
+    <owl:disjointWith rdf:resource="http://edas#SlideSet"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#TalkEvent">
+    <rdfs:subClassOf rdf:resource="http://edas#AcademicEvent"/>
+    <owl:disjointWith rdf:resource="http://edas#OrganizationalMeeting"/>
+    <owl:disjointWith rdf:resource="http://edas#Workshop"/>
+    <owl:disjointWith rdf:resource="http://edas#PaperPresentation"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#NGO">
+    <owl:disjointWith rdf:resource="http://edas#GovernmentOrganization"/>
+    <owl:disjointWith rdf:resource="http://edas#AcademiaOrganization"/>
+    <owl:disjointWith rdf:resource="http://edas#IndustryOrganization"/>
+    <rdfs:subClassOf rdf:resource="http://edas#Organization"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#AntennasTopic">
+    <owl:disjointWith rdf:resource="http://edas#SecurityTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#WirelessCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MultimediaTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ParallelAndDistributedComputingTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MobileComputingTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationTheoryTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerArchitectureTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#SignalProcessingTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#PowerlineTransmissionTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <rdfs:subClassOf rdf:resource="http://edas#Topic"/>
+    <owl:disjointWith rdf:resource="http://edas#MicroelectronicsTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#CADTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#OperatingTopicsystems"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ComputerArchitectureTopic">
+    <owl:disjointWith rdf:resource="http://edas#SignalProcessingTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#WirelessCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SecurityTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#PowerlineTransmissionTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#AntennasTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MicroelectronicsTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CommunicationTheoryTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ParallelAndDistributedComputingTopic"/>
+    <rdfs:subClassOf rdf:resource="http://edas#Topic"/>
+    <owl:disjointWith rdf:resource="http://edas#OperatingTopicsystems"/>
+    <owl:disjointWith rdf:resource="http://edas#CADTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MobileComputingTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MultimediaTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#CommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#CommunicationTheoryTopic">
+    <owl:disjointWith rdf:resource="http://edas#SignalProcessingTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#OperatingTopicsystems"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#CADTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MultimediaTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CommunicationsTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ParallelAndDistributedComputingTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#PowerlineTransmissionTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerArchitectureTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#WirelessCommunicationsTopic"/>
+    <rdfs:subClassOf rdf:resource="http://edas#Topic"/>
+    <owl:disjointWith rdf:resource="http://edas#MobileComputingTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SecurityTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#AntennasTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MicroelectronicsTopic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ComputerNetworksEnterpriseTopic">
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksAapplicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksManagementTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksMeasurementsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksOpticalTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksSecurityTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksSensorTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksSwitchingTopic"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://edas#ComputerNetworksTopic"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#DiningPlace">
+    <rdfs:subClassOf rdf:resource="http://edas#Place"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#TextualReviewQuestion">
+    <rdfs:subClassOf rdf:resource="http://edas#ReviewQuestion"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ComputerNetworksTopic">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#WirelessCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#AntennasTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerArchitectureTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MultimediaTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SecurityTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SignalProcessingTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#PerformanceTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MobileComputingTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#PowerlineTransmissionTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CommunicationTheoryTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CADTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#OperatingTopicsystems"/>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MicroelectronicsTopic"/>
+    <rdfs:subClassOf rdf:resource="http://edas#Topic"/>
+    <owl:disjointWith rdf:resource="http://edas#ParallelAndDistributedComputingTopic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ConferenceDinner">
+    <rdfs:subClassOf rdf:resource="http://edas#MealEvent"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#CallForReviews">
+    <rdfs:subClassOf rdf:resource="http://edas#Call"/>
+    <rdfs:comment>Call For Reviews</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#Person">
+    <owl:disjointWith rdf:resource="http://edas#Conference"/>
+    <owl:disjointWith rdf:resource="http://edas#Call"/>
+    <owl:disjointWith rdf:resource="http://edas#Topic"/>
+    <owl:disjointWith rdf:resource="http://edas#ConferenceSession"/>
+    <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
+    <owl:disjointWith rdf:resource="http://edas#PersonalHistory"/>
+    <owl:disjointWith rdf:resource="http://edas#Country"/>
+    <owl:disjointWith rdf:resource="http://edas#Document"/>
+    <owl:disjointWith rdf:resource="http://edas#Place"/>
+    <owl:disjointWith rdf:resource="http://edas#ReviewForm"/>
+    <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
+    <owl:disjointWith rdf:resource="http://edas#Organization"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#ConferenceEvent"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#ReviewQuestion"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ClosingTalk">
+    <rdfs:subClassOf rdf:resource="http://edas#TalkEvent"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#WelcomeTalk"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#PerformanceTopic">
+    <owl:disjointWith rdf:resource="http://edas#CommunicationTheoryTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#WirelessCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerArchitectureTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SecurityTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#PowerlineTransmissionTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SignalProcessingTopic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://edas#CryptographyTopic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://edas#CommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#AntennasTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MultimediaTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CADTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MobileComputingTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ParallelAndDistributedComputingTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MicroelectronicsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#OperatingTopicsystems"/>
+    <rdfs:subClassOf rdf:resource="http://edas#Topic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#WelcomeTalk">
+    <rdfs:subClassOf rdf:resource="http://edas#TalkEvent"/>
+    <owl:disjointWith rdf:resource="http://edas#ClosingTalk"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#CryptographyTopic">
+    <owl:disjointWith rdf:resource="http://edas#ComputerArchitectureTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#OperatingTopicsystems"/>
+    <owl:disjointWith rdf:resource="http://edas#MicroelectronicsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#AntennasTopic"/>
+    <rdfs:subClassOf rdf:resource="http://edas#Topic"/>
+    <owl:disjointWith rdf:resource="http://edas#MultimediaTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SignalProcessingTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CommunicationTheoryTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#RadioCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MobileComputingTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#TestOnlyTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CADTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#PowerlineTransmissionTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#PerformanceTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ParallelAndDistributedComputingTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#CommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SatelliteAndSpaceCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#ComputerNetworksTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#WirelessCommunicationsTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#SecurityTopic"/>
+    <owl:disjointWith rdf:resource="http://edas#MedicineTopic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ConferenceChair">
+    <rdfs:subClassOf rdf:resource="http://edas#Person"/>
+    <owl:disjointWith rdf:resource="http://edas#Author"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#RejectRating">
+    <rdfs:subClassOf rdf:resource="http://edas#ReviewRating"/>
+    <owl:disjointWith rdf:resource="http://edas#WeekRejectRating"/>
+    <owl:disjointWith rdf:resource="http://edas#AccpetIfRoomRating"/>
+    <owl:disjointWith rdf:resource="http://edas#AcceptRating"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://edas#ConferenceEvent">
+    <owl:disjointWith rdf:resource="http://edas#Conference"/>
+    <owl:disjointWith rdf:resource="http://edas#Place"/>
+    <owl:disjointWith rdf:resource="http://edas#PersonalHistory"/>
+    <owl:disjointWith rdf:resource="http://edas#Topic"/>
+    <owl:disjointWith rdf:resource="http://edas#ContactInformation"/>
+    <owl:disjointWith rdf:resource="http://edas#Call"/>
+    <owl:disjointWith rdf:resource="http://edas#Document"/>
+    <owl:disjointWith rdf:resource="http://edas#Country"/>
+    <owl:disjointWith rdf:resource="http://edas#Person"/>
+    <owl:disjointWith rdf:resource="http://edas#ConferenceSession"/>
+    <owl:disjointWith rdf:resource="http://edas#ReviewForm"/>
+    <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
+    <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
+    <owl:disjointWith rdf:resource="http://edas#ReviewQuestion"/>
+    <owl:disjointWith rdf:resource="http://edas#Organization"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://edas#hasCountry">
+    <rdfs:domain rdf:resource="http://edas#Conference"/>
+    <rdfs:range rdf:resource="http://edas#Country"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#forEvent">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://edas#hasCall"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://edas#AcademicEvent"/>
+    <rdfs:domain rdf:resource="http://edas#Call"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#attendeeAt">
+    <rdfs:range rdf:resource="http://edas#ConferenceEvent"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://edas#hasAttendee"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://edas#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#hasMenu">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://edas#isMenuOf"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://edas#MealMenu"/>
+    <rdfs:domain rdf:resource="http://edas#MealEvent"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#hasAttendee">
+    <rdfs:range rdf:resource="http://edas#Person"/>
+    <rdfs:domain rdf:resource="http://edas#ConferenceEvent"/>
+    <owl:inverseOf rdf:resource="http://edas#attendeeAt"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#hasRelatedPaper">
+    <rdfs:domain rdf:resource="http://edas#Author"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://edas#isWrittenBy"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://edas#Paper"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#initiates">
+    <rdfs:range rdf:resource="http://edas#Call"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://edas#isInitiatedBy"/>
+    </owl:inverseOf>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://edas#ConferenceChair"/>
+          <owl:Class rdf:about="http://edas#SessionChair"/>
+          <owl:Class rdf:about="http://edas#TPCMember"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#hasRelatedDocument">
+    <rdfs:range rdf:resource="http://edas#Document"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://edas#AcademicEvent"/>
+          <owl:Class rdf:about="http://edas#Conference"/>
+          <owl:Class rdf:about="http://edas#Person"/>
+          <owl:Class rdf:about="http://edas#ConferenceSession"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://edas#relatesTo"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#isLocationOf">
+    <rdfs:domain rdf:resource="http://edas#Place"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://edas#hasLocation"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://edas#ConferenceEvent"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#hasTopic">
+    <rdfs:range rdf:resource="http://edas#Topic"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://edas#isTopicOf"/>
+    </owl:inverseOf>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://edas#Conference"/>
+          <owl:Class rdf:about="http://edas#Paper"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#belongsToEvent">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://edas#hasProgramme"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://edas#Programme"/>
+    <rdfs:range rdf:resource="http://edas#ConferenceEvent"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#relatedToPaper">
+    <rdfs:range rdf:resource="http://edas#AcceptedPaper"/>
+    <rdfs:domain rdf:resource="http://edas#PaperPresentation"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://edas#relatedToEvent"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#isReviewing">
+    <rdfs:range rdf:resource="http://edas#Paper"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://edas#isReviewedBy"/>
+    </owl:inverseOf>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://edas#Reviewer"/>
+          <owl:Class rdf:about="http://edas#SessionChair"/>
+          <owl:Class rdf:about="http://edas#TPCMember"/>
+          <owl:Class rdf:about="http://edas#ConferenceChair"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#hasCall">
+    <rdfs:domain rdf:resource="http://edas#AcademicEvent"/>
+    <rdfs:range rdf:resource="http://edas#Call"/>
+    <owl:inverseOf rdf:resource="http://edas#forEvent"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#isTopicOf">
+    <owl:inverseOf rdf:resource="http://edas#hasTopic"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://edas#Paper"/>
+          <owl:Class rdf:about="http://edas#Conference"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://edas#Topic"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#hasRating">
+    <rdfs:range rdf:resource="http://edas#ReviewRating"/>
+    <rdfs:domain rdf:resource="http://edas#ActivePaper"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#relatedToEvent">
+    <rdfs:range rdf:resource="http://edas#PaperPresentation"/>
+    <rdfs:domain rdf:resource="http://edas#AcceptedPaper"/>
+    <owl:inverseOf rdf:resource="http://edas#relatedToPaper"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#isReviewHistoryOf">
+    <rdfs:range rdf:resource="http://edas#Reviewer"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://edas#hasReviewHistory"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://edas#PersonalReviewHistory"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#isProviderOf">
+    <rdfs:domain rdf:resource="http://edas#Organization"/>
+    <rdfs:range rdf:resource="http://edas#Sponsorship"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://edas#providedBy"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#isInitiatedBy">
+    <rdfs:domain rdf:resource="http://edas#Call"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://edas#SessionChair"/>
+          <owl:Class rdf:about="http://edas#TPCMember"/>
+          <owl:Class rdf:about="http://edas#ConferenceChair"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <owl:inverseOf rdf:resource="http://edas#initiates"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#isMenuOf">
+    <owl:inverseOf rdf:resource="http://edas#hasMenu"/>
+    <rdfs:range rdf:resource="http://edas#MealEvent"/>
+    <rdfs:domain rdf:resource="http://edas#MealMenu"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#hasMember">
+    <rdfs:domain rdf:resource="http://edas#Conference"/>
+    <rdfs:range rdf:resource="http://edas#Person"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://edas#isMemberOf"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#hasProgramme">
+    <rdfs:range rdf:resource="http://edas#Programme"/>
+    <owl:inverseOf rdf:resource="http://edas#belongsToEvent"/>
+    <rdfs:domain rdf:resource="http://edas#ConferenceEvent"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#providedBy">
+    <owl:inverseOf rdf:resource="http://edas#isProviderOf"/>
+    <rdfs:domain rdf:resource="http://edas#Sponsorship"/>
+    <rdfs:range rdf:resource="http://edas#Organization"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#isWrittenBy">
+    <rdfs:range rdf:resource="http://edas#Author"/>
+    <rdfs:domain rdf:resource="http://edas#Paper"/>
+    <owl:inverseOf rdf:resource="http://edas#hasRelatedPaper"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#relatesTo">
+    <owl:inverseOf rdf:resource="http://edas#hasRelatedDocument"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://edas#AcademicEvent"/>
+          <owl:Class rdf:about="http://edas#Conference"/>
+          <owl:Class rdf:about="http://edas#Person"/>
+          <owl:Class rdf:about="http://edas#ConferenceSession"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://edas#Document"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#hasReviewHistory">
+    <owl:inverseOf rdf:resource="http://edas#isReviewHistoryOf"/>
+    <rdfs:range rdf:resource="http://edas#PersonalReviewHistory"/>
+    <rdfs:domain rdf:resource="http://edas#Reviewer"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#isMemberOf">
+    <rdfs:range rdf:resource="http://edas#Conference"/>
+    <owl:inverseOf rdf:resource="http://edas#hasMember"/>
+    <rdfs:domain rdf:resource="http://edas#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#isReviewedBy">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://edas#SessionChair"/>
+          <owl:Class rdf:about="http://edas#Reviewer"/>
+          <owl:Class rdf:about="http://edas#TPCMember"/>
+          <owl:Class rdf:about="http://edas#ConferenceChair"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <owl:inverseOf rdf:resource="http://edas#isReviewing"/>
+    <rdfs:domain rdf:resource="http://edas#Paper"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edas#hasLocation">
+    <rdfs:domain rdf:resource="http://edas#ConferenceEvent"/>
+    <rdfs:range rdf:resource="http://edas#Place"/>
+    <owl:inverseOf rdf:resource="http://edas#isLocationOf"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#endDate">
+    <rdfs:comment>Conference End Date and Time</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://edas#Conference"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#paperDueOn">
+    <rdfs:comment>Conference Paper Date and Time Deadline</rdfs:comment>
+    <rdfs:domain rdf:resource="http://edas#Conference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#hasBiography">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://edas#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#hasPhone">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://edas#ContactInformation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#hasCity">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://edas#ContactInformation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#manuscriptDueOn">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://edas#Conference"/>
+    <rdfs:comment>Conference Manuscript Date and Time Deadline</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#hasEndDateTime">
+    <rdfs:domain rdf:resource="http://edas#ConferenceEvent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#hasStreet">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://edas#ContactInformation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#registrationDueOn">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://edas#Conference"/>
+    <rdfs:comment>Conference Registration Date and Time Deadline</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#hasCostCurrency">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://edas#Sponsorship"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#hasFirstName">
+    <rdfs:domain rdf:resource="http://edas#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#hasSubmissionDeadline">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://edas#Call"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#hasStartDateTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://edas#ConferenceEvent"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#hasCostAmount">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://edas#Sponsorship"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#hasName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://edas#Conference"/>
+    <rdfs:comment>Conference Full Name</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#hasLastName">
+    <rdfs:domain rdf:resource="http://edas#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#hasEmail">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://edas#ContactInformation"/>
+          <owl:Class rdf:about="http://edas#Person"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#startDate">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:comment>Conference Start Date and Time</rdfs:comment>
+    <rdfs:domain rdf:resource="http://edas#Conference"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#hasSubmissionInstructions">
+    <rdfs:domain rdf:resource="http://edas#Call"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://edas#hasPostalCode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://edas#ContactInformation"/>
+  </owl:DatatypeProperty>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <Country rdf:about="http://edas#Argentina"/>
+      <Country rdf:about="http://edas#Armenia"/>
+      <Country rdf:about="http://edas#Australia"/>
+      <Country rdf:about="http://edas#Austria"/>
+      <Country rdf:about="http://edas#Azerbaijan"/>
+      <Country rdf:about="http://edas#Bahamas"/>
+      <Country rdf:about="http://edas#Bahrain"/>
+      <Country rdf:about="http://edas#Bangladesh"/>
+      <Country rdf:about="http://edas#Belgium"/>
+      <Country rdf:about="http://edas#BosniaAndHerzegovina"/>
+      <Country rdf:about="http://edas#Botswana"/>
+      <Country rdf:about="http://edas#Brazil"/>
+      <Country rdf:about="http://edas#Bulgaria"/>
+      <Country rdf:about="http://edas#Belarus"/>
+      <Country rdf:about="http://edas#Cambodia"/>
+      <Country rdf:about="http://edas#Canada"/>
+      <Country rdf:about="http://edas#Chile"/>
+      <Country rdf:about="http://edas#CocosIslands"/>
+      <Country rdf:about="http://edas#DemocraticRepublicOfCongo"/>
+      <Country rdf:about="http://edas#China"/>
+      <Country rdf:about="http://edas#Colombia"/>
+      <Country rdf:about="http://edas#Croatia"/>
+      <Country rdf:about="http://edas#Cuba"/>
+      <Country rdf:about="http://edas#Cyprus"/>
+      <Country rdf:about="http://edas#CzechRepublic"/>
+      <Country rdf:about="http://edas#Denmark"/>
+      <Country rdf:about="http://edas#Ecuador"/>
+      <Country rdf:about="http://edas#Egypt"/>
+      <Country rdf:about="http://edas#Estonia"/>
+      <Country rdf:about="http://edas#Ethiopia"/>
+      <Country rdf:about="http://edas#EuropeanUnion"/>
+      <Country rdf:about="http://edas#Finland"/>
+      <Country rdf:about="http://edas#France"/>
+      <Country rdf:about="http://edas#Georgia"/>
+      <Country rdf:about="http://edas#Germany"/>
+      <Country rdf:about="http://edas#Ghana"/>
+      <Country rdf:about="http://edas#Greece"/>
+      <Country rdf:about="http://edas#HongKong"/>
+      <Country rdf:about="http://edas#Hungary"/>
+      <Country rdf:about="http://edas#Iceland"/>
+      <Country rdf:about="http://edas#India"/>
+      <Country rdf:about="http://edas#Indonesia"/>
+      <Country rdf:about="http://edas#Iran"/>
+      <Country rdf:about="http://edas#Iraq"/>
+      <Country rdf:about="http://edas#Ireland"/>
+      <Country rdf:about="http://edas#Israel"/>
+      <Country rdf:about="http://edas#Italy"/>
+      <Country rdf:about="http://edas#Japan"/>
+      <Country rdf:about="http://edas#Jordan"/>
+      <Country rdf:about="http://edas#Kenya"/>
+      <Country rdf:about="http://edas#Korea"/>
+      <Country rdf:about="http://edas#Kuwait"/>
+      <Country rdf:about="http://edas#Lebanon"/>
+      <Country rdf:about="http://edas#Latvia"/>
+      <Country rdf:about="http://edas#Libya"/>
+      <Country rdf:about="http://edas#Lithuania"/>
+      <Country rdf:about="http://edas#Luxemburg"/>
+      <Country rdf:about="http://edas#Macao"/>
+      <Country rdf:about="http://edas#Macedonia"/>
+      <Country rdf:about="http://edas#Madagascar"/>
+      <Country rdf:about="http://edas#Malaysia"/>
+      <Country rdf:about="http://edas#Malta"/>
+      <Country rdf:about="http://edas#Mauritius"/>
+      <Country rdf:about="http://edas#Mexico"/>
+      <Country rdf:about="http://edas#Mongolia"/>
+      <Country rdf:about="http://edas#Morocco"/>
+      <Country rdf:about="http://edas#Nicaragua"/>
+      <Country rdf:about="http://edas#Nepal"/>
+      <Country rdf:about="http://edas#Netherlands"/>
+      <Country rdf:about="http://edas#NewZealand"/>
+      <Country rdf:about="http://edas#Nigeria"/>
+      <Country rdf:about="http://edas#NorthKorea"/>
+      <Country rdf:about="http://edas#Norway"/>
+      <Country rdf:about="http://edas#Oman"/>
+      <Country rdf:about="http://edas#Pakistan"/>
+      <Country rdf:about="http://edas#Paraguay"/>
+      <Country rdf:about="http://edas#Peru"/>
+      <Country rdf:about="http://edas#Philippines"/>
+      <Country rdf:about="http://edas#Poland"/>
+      <Country rdf:about="http://edas#Portugal"/>
+      <Country rdf:about="http://edas#PuertoRico"/>
+      <Country rdf:about="http://edas#Qatar"/>
+      <Country rdf:about="http://edas#Romania"/>
+      <Country rdf:about="http://edas#Russia"/>
+      <Country rdf:about="http://edas#SanMarino"/>
+      <Country rdf:about="http://edas#SaudiArabia"/>
+      <Country rdf:about="http://edas#Senegal"/>
+      <Country rdf:about="http://edas#SerbiaAndMontenegro"/>
+      <Country rdf:about="http://edas#Singapore"/>
+      <Country rdf:about="http://edas#Slovakia"/>
+      <Country rdf:about="http://edas#Slovenia"/>
+      <Country rdf:about="http://edas#SouthAfrica"/>
+      <Country rdf:about="http://edas#Spain"/>
+      <Country rdf:about="http://edas#SriLanka"/>
+      <Country rdf:about="http://edas#Sweden"/>
+      <Country rdf:about="http://edas#Switzerland"/>
+      <Country rdf:about="http://edas#Syria"/>
+      <Country rdf:about="http://edas#Taiwan"/>
+      <Country rdf:about="http://edas#Tajikistan"/>
+      <Country rdf:about="http://edas#Tanzania"/>
+      <Country rdf:about="http://edas#Thailand"/>
+      <Country rdf:about="http://edas#Tunisia"/>
+      <Country rdf:about="http://edas#Turkey"/>
+      <Country rdf:about="http://edas#Turkmenistan"/>
+      <Country rdf:about="http://edas#UAE"/>
+      <Country rdf:about="http://edas#Ukraine"/>
+      <Country rdf:about="http://edas#Uganda"/>
+      <Country rdf:about="http://edas#UnitedKingdom"/>
+      <Country rdf:about="http://edas#Uruguay"/>
+      <Country rdf:about="http://edas#USA"/>
+      <Country rdf:about="http://edas#Venezuela"/>
+      <Country rdf:about="http://edas#Vietnam"/>
+      <Country rdf:about="http://edas#Yemen"/>
+      <Country rdf:about="http://edas#Zimbabwe"/>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+</rdf:RDF>

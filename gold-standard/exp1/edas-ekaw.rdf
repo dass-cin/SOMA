@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+				<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+					 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+					 xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+				<Alignment>
+				<xml>yes</xml>
+				<level>0</level>
+				<type>??</type>
+				
+				<onto1>
+				<Ontology rdf:about="http://edas">
+				  <location>http://nb.vse.cz/~svabo/oaei2010/edas.owl</location>
+				</Ontology>
+				</onto1>
+				<onto2>
+				<Ontology rdf:about="http://ekaw">
+				  <location>http://nb.vse.cz/~svabo/oaei2010/ekaw.owl</location>
+				</Ontology>
+				</onto2>
+
+							<map>
+								<Cell cid='4'>
+									<entity1 rdf:resource='http://edas#isReviewedBy'/>
+									<entity2 rdf:resource='http://ekaw#hasReviewer'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+
+							<map>
+								<Cell cid='8'>
+									<entity1 rdf:resource='http://edas#isReviewing'/>
+									<entity2 rdf:resource='http://ekaw#reviewerOfPaper'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+							<map>
+								<Cell cid='9'>
+									<entity1 rdf:resource='http://edas#Organization'/>
+									<entity2 rdf:resource='http://ekaw#Organisation'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+							<map>
+								<Cell cid='10'>
+									<entity1 rdf:resource='http://edas#Author'/>
+									<entity2 rdf:resource='http://ekaw#Paper_Author'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+
+							<map>
+								<Cell cid='16'>
+									<entity1 rdf:resource='http://edas#SessionChair'/>
+									<entity2 rdf:resource='http://ekaw#Session_Chair'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+							<map>
+								<Cell cid='17'>
+									<entity1 rdf:resource='http://edas#Person'/>
+									<entity2 rdf:resource='http://ekaw#Person'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+
+							<map>
+								<Cell cid='19'>
+									<entity1 rdf:resource='http://edas#Review'/>
+									<entity2 rdf:resource='http://ekaw#Review'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+
+							<map>
+								<Cell cid='27'>
+									<entity1 rdf:resource='http://edas#Attendee'/>
+									<entity2 rdf:resource='http://ekaw#Conference_Participant'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+
+							</Alignment>
+	</rdf:RDF>
