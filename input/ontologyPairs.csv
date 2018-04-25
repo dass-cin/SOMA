@@ -1,15 +1,1 @@
 cmt-Conference,/Users/diego/ontologies/conference/cmt.owl,/Users/diego/ontologies/conference/Conference.owl
-cmt-edas,/Users/diego/ontologies/conference/cmt.owl,/Users/diego/ontologies/conference/edas.owl
-cmt-ekaw,/Users/diego/ontologies/conference/cmt.owl,/Users/diego/ontologies/conference/ekaw.owl
-cmt-iasted,/Users/diego/ontologies/conference/cmt.owl,/Users/diego/ontologies/conference/iasted.owl
-cmt-sigkdd,/Users/diego/ontologies/conference/cmt.owl,/Users/diego/ontologies/conference/sigkdd.owl
-conference-edas,/Users/diego/ontologies/conference/conference.owl,/Users/diego/ontologies/conference/edas.owl
-conference-ekaw,/Users/diego/ontologies/conference/conference.owl,/Users/diego/ontologies/conference/ekaw.owl
-conference-iasted,/Users/diego/ontologies/conference/conference.owl,/Users/diego/ontologies/conference/iasted.owl
-conference-sigkdd,/Users/diego/ontologies/conference/conference.owl,/Users/diego/ontologies/conference/sigkdd.owl
-edas-ekaw,/Users/diego/ontologies/conference/edas.owl,/Users/diego/ontologies/conference/ekaw.owl
-edas-iasted,/Users/diego/ontologies/conference/edas.owl,/Users/diego/ontologies/conference/iasted.owl
-edas-sigkdd,/Users/diego/ontologies/conference/edas.owl,/Users/diego/ontologies/conference/sigkdd.owl
-ekaw-iasted,/Users/diego/ontologies/conference/ekaw.owl,/Users/diego/ontologies/conference/iasted.owl
-ekaw-sigkdd,/Users/diego/ontologies/conference/ekaw.owl,/Users/diego/ontologies/conference/sigkdd.owl
-iasted-sigkdd,/Users/diego/ontologies/conference/iasted.owl,/Users/diego/ontologies/conference/sigkdd.owl

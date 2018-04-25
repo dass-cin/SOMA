@@ -4,11 +4,12 @@ import edu.smu.tspell.wordnet.WordNetDatabase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
 /** Segmented Ontology Matching Algorithm
@@ -16,7 +17,8 @@ import org.springframework.context.annotation.Bean;
  **/
 @SpringBootApplication(scanBasePackageClasses = SomaApplication.class)
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
-@EnableBatchProcessing
+//@EnableBatchProcessing
+@EnableFeignClients
 @EnableConfigurationProperties({ApplicationConfig.class})
 public class SomaApplication {
 

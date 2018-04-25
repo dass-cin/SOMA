@@ -1,8 +1,5 @@
 package br.ufpe.cin.dass.soma.data;
 
-import br.ufpe.cin.dass.soma.model.OntologyClass;
-import br.ufpe.cin.dass.soma.model.PropertyModel;
-
 import java.util.Map;
 
 public class SegmentPairs {

@@ -16,12 +16,9 @@ import java.util.Iterator;
 @Service
 public class EvaluationService {
 
-    private final TextNormalizationService normalizationService;
-
     private final ApplicationConfig applicationConfig;
 
-    public EvaluationService(TextNormalizationService normalizationService, ApplicationConfig applicationConfig) {
-        this.normalizationService = normalizationService;
+    public EvaluationService(ApplicationConfig applicationConfig) {
         this.applicationConfig = applicationConfig;
     }
 

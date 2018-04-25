@@ -1,0 +1,22 @@
+package br.ufpe.cin.dass.soma.client;
+
+import br.cin.ufpe.dass.ontologycatalog.model.OntologyElement;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
+
+@FeignClient(name="ontology-catalog", url="${ontology.catalog.url}")
+public interface OntologyCatalogClient {
+
+    @PostMapping("ontologies/import")
+    ResponseEntity<?> importOntology(@RequestBody String ontologyURI);
+
+    @PutMapping("ontologies/query")
+    ResponseEntity<?> getQueryResult(@RequestBody String cypherQuery);
+
+    @GetMapping("keyword-search/{ontologyName}")
+    ResponseEntity<Map<String, Object>> findNodeByKeyword(@PathVariable("ontologyName") String ontologyName, @RequestParam("keyword") String keyword);
+
+}

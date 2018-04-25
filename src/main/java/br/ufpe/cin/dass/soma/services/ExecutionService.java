@@ -19,15 +19,12 @@ public class ExecutionService implements ItemProcessor<OntologyPair, Output>  {
     @Autowired
     private EvaluationService evaluationService;
 
-    @Autowired
-    private OntologySegmentationService ontologySegmentationService;
-
     @Override
     public Output process(OntologyPair ontologyPair) throws Exception {
 
         long startProcessing = System.currentTimeMillis();
 
-        SegmentPairs segmentPairs = ontologySegmentationService.processOntologyPair(ontologyPair);
+        SegmentPairs segmentPairs = null; //@TODO FIX
 
         ReferenceAlignment referenceAlignment = evaluationService.loadReferenceAlignment(ontologyPair.getId());
 
