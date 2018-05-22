@@ -4,14 +4,15 @@ public class Output {
 
     private String pairId;
     private String expId;
-    private Float precision;
-    private Float recall;
-    private Float fMeasure;
+    private Double precision;
+    private Double recall;
+    private Double fMeasure;
     private Long executionTime;
     private Integer totalClasses;
     private Integer totalProperties;
     private Integer classSegmentPairs;
     private Integer propertySegmentPairs;
+    private String matcher;
 
     public String getPairId() {
         return pairId;
@@ -29,27 +30,27 @@ public class Output {
         this.expId = expId;
     }
 
-    public Float getPrecision() {
+    public Double getPrecision() {
         return precision;
     }
 
-    public void setPrecision(Float precision) {
+    public void setPrecision(Double precision) {
         this.precision = precision;
     }
 
-    public Float getRecall() {
+    public Double getRecall() {
         return recall;
     }
 
-    public void setRecall(Float recall) {
+    public void setRecall(Double recall) {
         this.recall = recall;
     }
 
-    public Float getfMeasure() {
+    public Double getfMeasure() {
         return fMeasure;
     }
 
-    public void setfMeasure(Float fMeasure) {
+    public void setfMeasure(Double fMeasure) {
         this.fMeasure = fMeasure;
     }
 
@@ -91,5 +92,13 @@ public class Output {
 
     public void setTotalProperties(Integer totalProperties) {
         this.totalProperties = totalProperties;
+    }
+
+    public String getMatcher() {
+        return matcher;
+    }
+
+    public void setMatcher(String matcher) {
+        this.matcher = matcher;
     }
 }

@@ -1,17 +1,12 @@
-import br.cin.ufpe.dass.ontologycatalog.OntologyCatalogApplication;
-import br.cin.ufpe.dass.ontologycatalog.services.KeywordSearchService;
 import br.ufpe.cin.dass.soma.SomaApplication;
-import br.ufpe.cin.dass.soma.client.OntologyCatalogClient;
 import br.ufpe.cin.dass.soma.error.CouldNotImportOntologyException;
 import br.ufpe.cin.dass.soma.services.SOMAService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -58,11 +53,23 @@ public class SOMATest {
 
         URI sourceOntology = new URI("/Users/diego/ontologies/conference/cmt.owl");
 
-        Set<String> keywords = Arrays.asList(new String[]{ "document", "date", "author" }).stream().collect(Collectors.toSet());
+        Set<String> keywords = Arrays.asList(new String[]{ "document", "claim", "author", "person" }).stream().collect(Collectors.toSet());
 
-        ArrayList<Map<String, Object>> segment = somaService.generateSourceOntologySegment(sourceOntology, keywords, SOMAService.SegmentGenerationExtension.EXPANDED);
+        ArrayList<Map<String, Object>> segment = somaService.generateSourceOntologySegment(sourceOntology, keywords, SOMAService.SegmentGenerationExtension.SIMPLE);
 
         assertTrue(segment.size() > 0);
+
+    }
+
+    @Test
+    public void shouldGenerateAlignment() {
+
+        String sourceOntologyName = "cmt";
+        String targetOntologyName = "conference";
+
+        somaService.segmentPairsGeneration(sourceOntologyName, targetOntologyName);
+
+
 
     }
 

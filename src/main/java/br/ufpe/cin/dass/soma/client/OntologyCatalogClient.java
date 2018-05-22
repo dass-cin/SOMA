@@ -1,6 +1,5 @@
 package br.ufpe.cin.dass.soma.client;
 
-import br.cin.ufpe.dass.ontologycatalog.model.OntologyElement;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

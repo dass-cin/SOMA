@@ -1,1 +1,4 @@
-experimentId,pairId,totalClasses,totalProperties,classSegmentPairs,propertySegmentPairs,precision,recall,fMeasure,executionTime
+experimentId,pairId,precision,recall,fMeasure,executionTime,matcher
+exp1,cmt-Conference,0.14285714285714285,4.5330915684496827E-4,9.03750564844103E-4,6728,COMA
+exp1,cmt-Conference,0.4166666666666667,0.003843197540353574,0.007616146230007616,3928,LogMap
+exp1,cmt-Conference,0.4166666666666667,0.003843197540353574,0.007616146230007616,3406,AML

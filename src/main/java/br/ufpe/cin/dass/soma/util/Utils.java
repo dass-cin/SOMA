@@ -11,4 +11,13 @@ public class Utils {
         return ontologyName;
     }
 
+    public static String extractElementName(String fullname) {
+        if (fullname.contains("#")) {
+            fullname = fullname.substring(
+                    fullname.indexOf('#')+1,
+                    fullname.lastIndexOf('>'));
+        }
+        return fullname;
+    }
+
 }

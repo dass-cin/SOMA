@@ -8,6 +8,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
@@ -16,8 +18,8 @@ import org.springframework.context.annotation.Bean;
  * @author Diego Pessoa <derp@cin.ufpe.br>
  **/
 @SpringBootApplication(scanBasePackageClasses = SomaApplication.class)
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 //@EnableBatchProcessing
+@EnableAutoConfiguration()
 @EnableFeignClients
 @EnableConfigurationProperties({ApplicationConfig.class})
 public class SomaApplication {
@@ -45,7 +47,6 @@ public class SomaApplication {
         // Instantiate wordnet.
         try {
             wordNet = WordNetDatabase.getFileInstance();
-            wordNet.allWordForms(); //loading wordnet to memory
         } catch (Exception e) {
             log.error("Failed to start wordnet database");
         }

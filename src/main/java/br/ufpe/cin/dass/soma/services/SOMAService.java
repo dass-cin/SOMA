@@ -1,8 +1,5 @@
 package br.ufpe.cin.dass.soma.services;
 
-import br.cin.ufpe.dass.ontologycatalog.model.ClassNode;
-import br.cin.ufpe.dass.ontologycatalog.model.DataPropertyNode;
-import br.cin.ufpe.dass.ontologycatalog.model.ObjectPropertyNode;
 import br.ufpe.cin.dass.soma.client.OntologyCatalogClient;
 import br.ufpe.cin.dass.soma.error.CouldNotImportOntologyException;
 import br.ufpe.cin.dass.soma.util.Utils;
@@ -41,12 +38,12 @@ public class SOMAService {
             //1) Ontologies importing and pre-processing
             importOntologiesInTheCatalog(sourceOntology, targetOntology);
 
-            generateSourceOntologySegment(sourceOntology, keywords, extension);
-
-            //2) Source ontology segmentation
-
+            //2) Source ontology segmentation (and keyword search)
+            ArrayList<Map<String, Object>> ontologySegment = generateSourceOntologySegment(sourceOntology, keywords, extension);
 
             //3) Matching execution
+
+
 
         } catch (CouldNotImportOntologyException e) {
             log.error("Could not import ontology");
@@ -90,12 +87,12 @@ public class SOMAService {
                                 "RETURN c1,TYPE(r),c2", (ontologyElement.get("uri"))));
                         if (extension.equals(EXPANDED)) {
                             query.append("\nUNION\n");
-                            query.append(String.format("MATCH(c1:ClassNode)-[r]-(c2:ObjectPropertyNode)\n" +
-                                    "WHERE c1.uri = '%s'\n" +
+                            query.append(String.format("MATCH(c1:ObjectPropertyNode)-[r]-(c2:ClassNode)\n" +
+                                    "WHERE c2.uri = '%s'\n" +
                                     "RETURN c1,TYPE(r),c2", (ontologyElement.get("uri"))));
                             query.append(UNION);
-                            query.append(String.format("MATCH(c1:ClassNode)-[r]-(c2:DataPropertyNode)\n" +
-                                    "WHERE c1.uri = '%s'\n" +
+                            query.append(String.format("MATCH(c1:DataPropertyNode)-[r]-(c2:ClassNode)\n" +
+                                    "WHERE c2.uri = '%s'\n" +
                                     "RETURN c1,TYPE(r),c2", (ontologyElement.get("uri"))));
                         }
                     } else if (elementType.equals("ObjectPropertyNode")) {
@@ -120,7 +117,8 @@ public class SOMAService {
 
                 }
             } catch (Exception e) {
-                log.warn("Keyword {} not found in the catalog");
+                e.printStackTrace();
+                log.warn("Keyword {} not found in the catalog", keyword);
             }
         }
         log.info("segment generation query = \n {}", query.toString());
@@ -133,5 +131,10 @@ public class SOMAService {
 
     }
 
+    public void segmentPairsGeneration(String sourceOntologyName, String targetOntologyName) {
+
+
+
+    }
 
 }

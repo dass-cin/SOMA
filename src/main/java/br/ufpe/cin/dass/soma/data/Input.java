@@ -1,10 +1,12 @@
 package br.ufpe.cin.dass.soma.data;
 
-public class OntologyPair {
+public class Input {
 
     private String id;
     private String sourceOntology;
     private String targetOntology;
+    private String keywords;
+    private String matcher;
 
     public String getId() {
         return id;
@@ -30,5 +32,19 @@ public class OntologyPair {
         this.targetOntology = targetOntology;
     }
 
+    public String getKeywords() {
+        return keywords;
+    }
 
+    public void setKeywords(String keywords) {
+        this.keywords = keywords;
+    }
+
+    public String getMatcher() {
+        return matcher;
+    }
+
+    public void setMatcher(String matcher) {
+        this.matcher = matcher;
+    }
 }

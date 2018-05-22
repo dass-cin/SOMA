@@ -21,7 +21,27 @@ public class ApplicationConfig {
 
     private String wordnetDir;
 
+    private boolean generateSegments = true;
+
+    private String generationExtension = "simple";
+
     private Ontologies ontologies = new Ontologies();
+
+    public String getGenerationExtension() {
+        return generationExtension;
+    }
+
+    public void setGenerationExtension(String generationExtension) {
+        this.generationExtension = generationExtension;
+    }
+
+    public boolean isGenerateSegments() {
+        return generateSegments;
+    }
+
+    public void setGenerateSegments(boolean generateSegments) {
+        this.generateSegments = generateSegments;
+    }
 
     public String getWordnetDir() {
         return wordnetDir;
