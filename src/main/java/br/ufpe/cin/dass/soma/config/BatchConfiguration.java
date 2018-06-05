@@ -25,7 +25,7 @@ import org.springframework.core.io.FileSystemResource;
 
 import javax.sql.DataSource;
 
-//@Configuration
+@Configuration
 public class BatchConfiguration {
 
     @Autowired

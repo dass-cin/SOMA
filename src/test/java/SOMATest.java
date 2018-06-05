@@ -35,19 +35,6 @@ public class SOMATest {
     }
 
 
-    public void shouldImportOntologiesInTheCatalog() throws URISyntaxException {
-
-        URI sourceOntology = new URI("/Users/diego/ontologies/conference/cmt.owl");
-        URI targetOntology = new URI("/Users/diego/ontologies/conference/conference.owl");
-        try {
-            somaService.importOntologiesInTheCatalog(sourceOntology, targetOntology);
-        } catch (CouldNotImportOntologyException e) {
-            e.printStackTrace();
-            fail("Ontology could not be imported");
-        }
-
-    }
-
     @Test
     public void shouldGenerateOntologySegment() throws URISyntaxException {
 
@@ -55,22 +42,11 @@ public class SOMATest {
 
         Set<String> keywords = Arrays.asList(new String[]{ "document", "claim", "author", "person" }).stream().collect(Collectors.toSet());
 
-        ArrayList<Map<String, Object>> segment = somaService.generateSourceOntologySegment(sourceOntology, keywords, SOMAService.SegmentGenerationExtension.SIMPLE);
+        String segmentQuery = somaService.generateSourceOntologySegmentQuery(sourceOntology, keywords, SOMAService.SegmentGenerationExtension.SIMPLE);
 
-        assertTrue(segment.size() > 0);
-
-    }
-
-    @Test
-    public void shouldGenerateAlignment() {
-
-        String sourceOntologyName = "cmt";
-        String targetOntologyName = "conference";
-
-        somaService.segmentPairsGeneration(sourceOntologyName, targetOntologyName);
-
-
+        assertTrue(!segmentQuery.isEmpty());
 
     }
+
 
 }

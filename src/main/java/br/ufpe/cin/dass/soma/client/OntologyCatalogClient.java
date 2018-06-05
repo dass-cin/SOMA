@@ -18,4 +18,8 @@ public interface OntologyCatalogClient {
     @GetMapping("keyword-search/{ontologyName}")
     ResponseEntity<Map<String, Object>> findNodeByKeyword(@PathVariable("ontologyName") String ontologyName, @RequestParam("keyword") String keyword);
 
+    @PutMapping("/ontology-export")
+    ResponseEntity<String> exportOntologySegmentAsFile(@RequestBody String segmentationQuery, @RequestParam("ontologyName") String ontologyName, @RequestParam("filepath") String filePath);
+
+
 }

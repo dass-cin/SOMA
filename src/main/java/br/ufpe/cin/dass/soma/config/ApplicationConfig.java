@@ -25,7 +25,11 @@ public class ApplicationConfig {
 
     private String generationExtension = "simple";
 
+    private String segmentPath = "/tmp";
+
     private Ontologies ontologies = new Ontologies();
+
+    private double matchingThreshold;
 
     public String getGenerationExtension() {
         return generationExtension;
@@ -162,5 +166,21 @@ public class ApplicationConfig {
 
     public void setStopWordsFile(String stopWordsFile) {
         this.stopWordsFile = stopWordsFile;
+    }
+
+    public String getSegmentPath() {
+        return segmentPath;
+    }
+
+    public void setSegmentPath(String segmentPath) {
+        this.segmentPath = segmentPath;
+    }
+
+    public double getMatchingThreshold() {
+        return matchingThreshold;
+    }
+
+    public void setMatchingThreshold(double matchingThreshold) {
+        this.matchingThreshold = matchingThreshold;
     }
 }

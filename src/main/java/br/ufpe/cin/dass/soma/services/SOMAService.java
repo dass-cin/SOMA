@@ -3,17 +3,19 @@ package br.ufpe.cin.dass.soma.services;
 import br.ufpe.cin.dass.soma.client.OntologyCatalogClient;
 import br.ufpe.cin.dass.soma.error.CouldNotImportOntologyException;
 import br.ufpe.cin.dass.soma.util.Utils;
+import jdk.internal.org.objectweb.asm.tree.ClassNode;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.*;
+import org.semanticweb.owlapi.util.DefaultPrefixManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
 import java.net.URI;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import static br.ufpe.cin.dass.soma.services.SOMAService.SegmentGenerationExtension.EXPANDED;
 
@@ -32,39 +34,9 @@ public class SOMAService {
 
     public enum SegmentGenerationExtension { SIMPLE, EXPANDED}
 
-    public void processWorkflow(URI sourceOntology, URI targetOntology, Set<String> keywords, SegmentGenerationExtension extension) {
+    public String generateSourceOntologySegmentQuery(URI souceOntology, Set<String> keywords, SegmentGenerationExtension extension) {
 
-        try {
-            //1) Ontologies importing and pre-processing
-            importOntologiesInTheCatalog(sourceOntology, targetOntology);
-
-            //2) Source ontology segmentation (and keyword search)
-            ArrayList<Map<String, Object>> ontologySegment = generateSourceOntologySegment(sourceOntology, keywords, extension);
-
-            //3) Matching execution
-
-
-
-        } catch (CouldNotImportOntologyException e) {
-            log.error("Could not import ontology");
-        }
-
-
-
-    }
-
-    public void importOntologiesInTheCatalog(URI sourceOntology, URI targetOntology) throws CouldNotImportOntologyException {
-        ResponseEntity<?> responseEntitySource = ontologyCatalog.importOntology(sourceOntology.toString());
-        ResponseEntity<?>  responseEntityTarget = ontologyCatalog.importOntology(targetOntology.toString());
-        if (!responseEntitySource.getStatusCode().equals(HttpStatus.OK) || !responseEntityTarget.getStatusCode().equals(HttpStatus.OK)) {
-            throw new CouldNotImportOntologyException("It was not possible to import ontology in the catalog");
-        }
-        log.info("Source ontology {} and target ontology {} successfully imported", sourceOntology, targetOntology);
-    }
-
-    public ArrayList<Map<String, Object>> generateSourceOntologySegment(URI souceOntology, Set<String> keywords, SegmentGenerationExtension extension) {
-
-        ArrayList<Map<String, Object>> ontologySegment = null;
+//        ArrayList<Map<String, Object>> ontologySegment = null;
 
         String ontologyName = Utils.getOntologyNameFromURI(souceOntology);
 
@@ -122,18 +94,12 @@ public class SOMAService {
             }
         }
         log.info("segment generation query = \n {}", query.toString());
-        ResponseEntity<?> result = ontologyCatalog.getQueryResult(query.toString());
-        if (result.getStatusCode().equals(HttpStatus.OK)) {
-            ontologySegment = (ArrayList<Map<String, Object>>) result.getBody();
-        }
+//        ResponseEntity<?> result = ontologyCatalog.getQueryResult(query.toString());
+//        if (result.getStatusCode().equals(HttpStatus.OK)) {
+//            ontologySegment = (ArrayList<Map<String, Object>>) result.getBody();
+//        }
 
-        return ontologySegment;
-
-    }
-
-    public void segmentPairsGeneration(String sourceOntologyName, String targetOntologyName) {
-
-
+        return query.toString();
 
     }
 

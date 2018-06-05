@@ -8,6 +8,7 @@ import br.ufpe.cin.dass.soma.config.ApplicationConfig;
 import br.ufpe.cin.dass.soma.data.Input;
 import br.ufpe.cin.dass.soma.data.Output;
 import br.ufpe.cin.dass.soma.data.ReferenceAlignment;
+import org.apache.commons.io.FilenameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ItemProcessor;
@@ -15,7 +16,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import java.util.Map;
+import java.io.File;
+import java.net.URI;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class ExecutionService implements ItemProcessor<Input, Output>  {
 
@@ -31,6 +35,9 @@ public class ExecutionService implements ItemProcessor<Input, Output>  {
     @Autowired
     private OntologyCatalogClient ontologyCatalogClient;
 
+    @Autowired
+    private SOMAService somaService;
+
     private Logger log = LoggerFactory.getLogger(ExecutionService.class);
 
     @Override
@@ -38,11 +45,43 @@ public class ExecutionService implements ItemProcessor<Input, Output>  {
 
         log.info("Starting to process pair : {}-{} in matcher {}", ontologyPair.getSourceOntology(),  ontologyPair.getTargetOntology(), ontologyPair.getMatcher()   );
 
-        //@TODO import ontolog in catalog and generate segments
+        ontologyCatalogClient.importOntology("file://" +ontologyPair.getSourceOntology());
+//        ontologyCatalogClient.importOntology("file://" +ontologyPair.getTargetOntology());
 
         long startProcessing = System.currentTimeMillis();
 
-        ResponseEntity<Alignment> alignmentResponseEntity = matcherCatalogClient.align(ontologyPair.getSourceOntology(), ontologyPair.getTargetOntology(), ontologyPair.getMatcher());
+        String segmentSourceFile = "";
+
+        if (ontologyPair.getKeywords() != null && !ontologyPair.getKeywords().isEmpty()) {
+            //using segments
+            Set<String> keywords = Arrays.asList(ontologyPair.getKeywords().split(",")).stream().collect(Collectors.toSet());
+
+            String generationExtensionString = applicationConfig.getGenerationExtension();
+            SOMAService.SegmentGenerationExtension extension = SOMAService.SegmentGenerationExtension.valueOf(generationExtensionString.toUpperCase());
+
+            String sourceOntologySegmentQuery = somaService.generateSourceOntologySegmentQuery(URI.create(ontologyPair.getSourceOntology()), keywords, extension);
+
+            segmentSourceFile = applicationConfig.getSegmentPath() + "/" + "segment-"+ontologyPair.getId()+".owl";
+
+            ResponseEntity responseEntityfileSegmentGeneration = ontologyCatalogClient.exportOntologySegmentAsFile(sourceOntologySegmentQuery, FilenameUtils.getName(URI.create(ontologyPair.getSourceOntology()).getPath()), segmentSourceFile);
+
+            if (!responseEntityfileSegmentGeneration.getStatusCode().equals(HttpStatus.OK)) {
+                throw new Exception(String.format("Fail to generate segment for ontology pair %s", ontologyPair.getId()));
+            }
+
+            if (!new File(segmentSourceFile).exists()) {
+                throw new Exception(String.format("Segment file %s does not exists", segmentSourceFile));
+            }
+
+        }
+
+        String sourceOntology = ontologyPair.getSourceOntology();
+
+        if (!segmentSourceFile.isEmpty()) {
+            sourceOntology = segmentSourceFile;
+        }
+
+        ResponseEntity<Alignment> alignmentResponseEntity = matcherCatalogClient.align(segmentSourceFile, ontologyPair.getTargetOntology(), ontologyPair.getMatcher());
         if (!alignmentResponseEntity.getStatusCode().equals(HttpStatus.OK)) {
             throw new Exception(String.format("Fail to execute alingment for matcher %s", ontologyPair.getMatcher()));
         }
@@ -55,6 +94,9 @@ public class ExecutionService implements ItemProcessor<Input, Output>  {
         int falseNegatives = 0;
 
         for (Correspondence correspondence : alignment.getCorrespondences()) {
+            if (correspondence.getSimilarityValue() < applicationConfig.getMatchingThreshold()) {
+                continue;
+            }
             String sourceElement = correspondence.getSourceElement().toString(); //http://cmt#adjustedBy
             String targetElement = correspondence.getTargetElement().toString();
             if ((referenceAlignment.getCorrespondences().containsKey(sourceElement)
