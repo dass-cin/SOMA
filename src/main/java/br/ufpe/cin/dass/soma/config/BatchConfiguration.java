@@ -63,12 +63,12 @@ public class BatchConfiguration {
         FlatFileItemWriter<Output> writer = new FlatFileItemWriter<>();
         writer.setResource(new FileSystemResource("output.csv"));
         writer.setHeaderCallback(w -> {
-            w.write("experimentId,pairId,precision,recall,fMeasure,executionTime,matcher");
+            w.write("experimentId,pairId,precision,recall,fMeasure,executionTime,matcher,truePositives,falsePositives,falseNegatives");
         });
         writer.setLineAggregator(new DelimitedLineAggregator<Output>(){{
             setDelimiter(",");
             setFieldExtractor(new BeanWrapperFieldExtractor<Output>() {{
-                setNames(new String[] {"expId", "pairId", "precision", "recall", "fMeasure", "executionTime", "matcher"});
+                setNames(new String[] {"expId", "pairId", "precision", "recall", "fMeasure", "executionTime", "matcher","truePositives","falsePositives","falseNegatives"});
             }});
         }});
         return writer;

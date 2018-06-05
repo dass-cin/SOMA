@@ -13,6 +13,9 @@ public class Output {
     private Integer classSegmentPairs;
     private Integer propertySegmentPairs;
     private String matcher;
+    private Integer truePositives;
+    private Integer falsePositives;
+    private Integer falseNegatives;
 
     public String getPairId() {
         return pairId;
@@ -100,5 +103,29 @@ public class Output {
 
     public void setMatcher(String matcher) {
         this.matcher = matcher;
+    }
+
+    public Integer getTruePositives() {
+        return truePositives;
+    }
+
+    public void setTruePositives(Integer truePositives) {
+        this.truePositives = truePositives;
+    }
+
+    public Integer getFalsePositives() {
+        return falsePositives;
+    }
+
+    public void setFalsePositives(Integer falsePositives) {
+        this.falsePositives = falsePositives;
+    }
+
+    public Integer getFalseNegatives() {
+        return falseNegatives;
+    }
+
+    public void setFalseNegatives(Integer falseNegatives) {
+        this.falseNegatives = falseNegatives;
     }
 }

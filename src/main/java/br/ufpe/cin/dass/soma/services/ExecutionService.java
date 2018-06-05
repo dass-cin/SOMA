@@ -45,11 +45,6 @@ public class ExecutionService implements ItemProcessor<Input, Output>  {
 
         log.info("Starting to process pair : {}-{} in matcher {}", ontologyPair.getSourceOntology(),  ontologyPair.getTargetOntology(), ontologyPair.getMatcher()   );
 
-        ontologyCatalogClient.importOntology("file://" +ontologyPair.getSourceOntology());
-//        ontologyCatalogClient.importOntology("file://" +ontologyPair.getTargetOntology());
-
-        long startProcessing = System.currentTimeMillis();
-
         String segmentSourceFile = "";
 
         if (ontologyPair.getKeywords() != null && !ontologyPair.getKeywords().isEmpty()) {
@@ -81,11 +76,20 @@ public class ExecutionService implements ItemProcessor<Input, Output>  {
             sourceOntology = segmentSourceFile;
         }
 
-        ResponseEntity<Alignment> alignmentResponseEntity = matcherCatalogClient.align(segmentSourceFile, ontologyPair.getTargetOntology(), ontologyPair.getMatcher());
+        long startProcessing = System.currentTimeMillis();
+
+        ResponseEntity<Alignment> alignmentResponseEntity = matcherCatalogClient.align(sourceOntology, ontologyPair.getTargetOntology(), ontologyPair.getMatcher());
         if (!alignmentResponseEntity.getStatusCode().equals(HttpStatus.OK)) {
             throw new Exception(String.format("Fail to execute alingment for matcher %s", ontologyPair.getMatcher()));
         }
+
+        long endProcessing = System.currentTimeMillis();
+
         Alignment alignment = alignmentResponseEntity.getBody();
+
+        if (alignment == null || alignment.getCorrespondences() == null) {
+            return null;
+        }
 
         ReferenceAlignment referenceAlignment = evaluationService.loadReferenceAlignment(ontologyPair.getId());
 
@@ -93,10 +97,11 @@ public class ExecutionService implements ItemProcessor<Input, Output>  {
         int falsePositives = 0;
         int falseNegatives = 0;
 
-        for (Correspondence correspondence : alignment.getCorrespondences()) {
-            if (correspondence.getSimilarityValue() < applicationConfig.getMatchingThreshold()) {
-                continue;
-            }
+
+
+        Set<Correspondence> correspondences = alignment.getCorrespondences().stream().filter(c -> c.getSimilarityValue() >= applicationConfig.getMatchingThreshold()).collect(Collectors.toSet());
+
+        for (Correspondence correspondence : correspondences) {
             String sourceElement = correspondence.getSourceElement().toString(); //http://cmt#adjustedBy
             String targetElement = correspondence.getTargetElement().toString();
             if ((referenceAlignment.getCorrespondences().containsKey(sourceElement)
@@ -112,20 +117,22 @@ public class ExecutionService implements ItemProcessor<Input, Output>  {
                 falsePositives++;
             }
 
-            for (Map.Entry<String, String> reference : referenceAlignment.getCorrespondences().entrySet()) {
-                for (Correspondence alignmentCorrespondence : alignment.getCorrespondences()) {
-                    if ((!alignmentCorrespondence.getSourceElement().equals(reference.getKey()) &&
-                            !alignmentCorrespondence.getTargetElement().equals(reference.getValue())) ||
-                            !alignmentCorrespondence.getSourceElement().equals(reference.getValue()) &&
-                                    !alignmentCorrespondence.getTargetElement().equals(reference.getKey())) {
-                        falseNegatives++;
-                    }
-                }
-            }
-
         }
 
-        long endProcessing = System.currentTimeMillis();
+        for (Map.Entry<String, String> reference : referenceAlignment.getCorrespondences().entrySet()) {
+            boolean elementIsPresent = false;
+            for (Correspondence alignmentCorrespondence : correspondences) {
+                if ((alignmentCorrespondence.getSourceElement().toString().equals(reference.getKey()) &&
+                        alignmentCorrespondence.getTargetElement().toString().equals(reference.getValue())) ||
+                        alignmentCorrespondence.getSourceElement().toString().equals(reference.getValue()) &&
+                                alignmentCorrespondence.getTargetElement().toString().equals(reference.getKey())) {
+                    elementIsPresent = true;
+                }
+            }
+            if (!elementIsPresent)
+                falseNegatives++;
+        }
+
 
         Output output = new Output();
         output.setMatcher(ontologyPair.getMatcher());
@@ -134,6 +141,9 @@ public class ExecutionService implements ItemProcessor<Input, Output>  {
         output.setExpId(applicationConfig.getExpId());
         output.setPrecision((double)truePositives / (double)(truePositives + falsePositives));
         output.setRecall(Double.valueOf((double)truePositives / (double)(truePositives + falseNegatives)));
+        output.setTruePositives(truePositives);
+        output.setFalseNegatives(falseNegatives);
+        output.setFalsePositives(falsePositives);
         if ((output.getRecall() + output.getPrecision()) > 0) {
             output.setfMeasure( 2 * (((double)output.getPrecision() * output.getRecall()) / (output.getPrecision() + output.getRecall())));
         } else {
