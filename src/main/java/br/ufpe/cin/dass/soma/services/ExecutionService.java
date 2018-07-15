@@ -8,6 +8,7 @@ import br.ufpe.cin.dass.soma.config.ApplicationConfig;
 import br.ufpe.cin.dass.soma.data.Input;
 import br.ufpe.cin.dass.soma.data.Output;
 import br.ufpe.cin.dass.soma.data.ReferenceAlignment;
+import feign.FeignException;
 import org.apache.commons.io.FilenameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,6 +48,8 @@ public class ExecutionService implements ItemProcessor<Input, Output>  {
 
         String segmentSourceFile = "";
 
+        String segmentTargetFile = "";
+
         if (ontologyPair.getKeywords() != null && !ontologyPair.getKeywords().isEmpty()) {
             //using segments
             Set<String> keywords = Arrays.asList(ontologyPair.getKeywords().split(",")).stream().collect(Collectors.toSet());
@@ -56,34 +59,58 @@ public class ExecutionService implements ItemProcessor<Input, Output>  {
 
             String sourceOntologySegmentQuery = somaService.generateSourceOntologySegmentQuery(URI.create(ontologyPair.getSourceOntology()), keywords, extension);
 
-            segmentSourceFile = applicationConfig.getSegmentPath() + "/" + "segment-"+ontologyPair.getId()+".owl";
+            if (sourceOntologySegmentQuery != null && !sourceOntologySegmentQuery.isEmpty()) {
+                segmentSourceFile = applicationConfig.getSegmentPath() + "/" + "source-segment-" + ontologyPair.getId() + ".owl";
 
-            ResponseEntity responseEntityfileSegmentGeneration = ontologyCatalogClient.exportOntologySegmentAsFile(sourceOntologySegmentQuery, FilenameUtils.getName(URI.create(ontologyPair.getSourceOntology()).getPath()), segmentSourceFile);
+                ResponseEntity responseEntityfileSegmentGeneration = ontologyCatalogClient.exportOntologySegmentAsFile(sourceOntologySegmentQuery, FilenameUtils.getName(URI.create(ontologyPair.getSourceOntology()).getPath()), segmentSourceFile);
 
-            if (!responseEntityfileSegmentGeneration.getStatusCode().equals(HttpStatus.OK)) {
-                throw new Exception(String.format("Fail to generate segment for ontology pair %s", ontologyPair.getId()));
+                if (!responseEntityfileSegmentGeneration.getStatusCode().equals(HttpStatus.OK)) {
+                    throw new Exception(String.format("Fail to generate source segment for ontology pair %s", ontologyPair.getId()));
+                }
+
+                if (!new File(segmentSourceFile).exists()) {
+                    throw new Exception(String.format("Segment file %s does not exists", segmentSourceFile));
+                }
             }
 
-            if (!new File(segmentSourceFile).exists()) {
-                throw new Exception(String.format("Segment file %s does not exists", segmentSourceFile));
+            if (segmentSourceFile == null || segmentSourceFile.isEmpty()) {
+                log.error("segment file is empy for pair {}", ontologyPair.getId());
+                return null;
+            }
+
+            String targetOntologySegmentQuery = somaService.generateTargetOntologySegmentQuery(URI.create(segmentSourceFile), URI.create(ontologyPair.getTargetOntology()), extension);
+            if (targetOntologySegmentQuery != null && !targetOntologySegmentQuery.isEmpty()) {
+                segmentTargetFile = applicationConfig.getSegmentPath() + "/" +  "target-segment-" + ontologyPair.getId() + ".owl";
+
+                try {
+                    ResponseEntity responseEntityfileSegmentGeneration = ontologyCatalogClient.exportOntologySegmentAsFile(targetOntologySegmentQuery, FilenameUtils.getName(URI.create(ontologyPair.getTargetOntology()).getPath()), segmentTargetFile);
+                    if (!new File(segmentTargetFile).exists()) {
+                        throw new Exception(String.format("Segment file %s does not exists", segmentSourceFile));
+                    }
+                } catch (FeignException e) {
+                    log.error((String.format("Fail to generate target segment for ontology pair %s", ontologyPair.getId())));
+                    return null;
+                }
+
             }
 
         }
 
-        String sourceOntology = ontologyPair.getSourceOntology();
+        String sourceOntology = segmentSourceFile;
 
-        if (!segmentSourceFile.isEmpty()) {
-            sourceOntology = segmentSourceFile;
+//        if (!segmentSourceFile.isEmpty()) {
+//            sourceOntology = segmentSourceFile;
+//        }
+
+        String targetOntology = ontologyPair.getTargetOntology();
+        if (!segmentTargetFile.isEmpty()) {
+            targetOntology = segmentTargetFile;
         }
 
-        long startProcessing = System.currentTimeMillis();
-
-        ResponseEntity<Alignment> alignmentResponseEntity = matcherCatalogClient.align(sourceOntology, ontologyPair.getTargetOntology(), ontologyPair.getMatcher());
+        ResponseEntity<Alignment> alignmentResponseEntity = matcherCatalogClient.align(sourceOntology, targetOntology, ontologyPair.getMatcher());
         if (!alignmentResponseEntity.getStatusCode().equals(HttpStatus.OK)) {
-            throw new Exception(String.format("Fail to execute alingment for matcher %s", ontologyPair.getMatcher()));
+            throw new Exception(String.format("Fail to execute alignment for matcher %s", ontologyPair.getMatcher()));
         }
-
-        long endProcessing = System.currentTimeMillis();
 
         Alignment alignment = alignmentResponseEntity.getBody();
 
@@ -110,14 +137,29 @@ public class ExecutionService implements ItemProcessor<Input, Output>  {
                             && referenceAlignment.getCorrespondences().containsValue(sourceElement)) {
                 truePositives++;
             }
-            if ((!referenceAlignment.getCorrespondences().containsKey(sourceElement) ||
+            if ((!referenceAlignment.getCorrespondences().containsKey(sourceElement) &&
                     !referenceAlignment.getCorrespondences().containsValue(targetElement)) &&
-                    !referenceAlignment.getCorrespondences().containsValue(targetElement) ||
-                    !referenceAlignment.getCorrespondences().containsKey(sourceElement)) {
+                    !referenceAlignment.getCorrespondences().containsValue(sourceElement) &&
+                    !referenceAlignment.getCorrespondences().containsKey(targetElement)) {
                 falsePositives++;
             }
 
         }
+
+//        for(Correspondence alignmentCorrespondence : correspondences) {
+//            boolean elementIsPresent = false;
+//            for (Map.Entry<String, String> reference : referenceAlignment.getCorrespondences().entrySet()) {
+//                if ((alignmentCorrespondence.getSourceElement().toString().equals(reference.getKey()) &&
+//                        alignmentCorrespondence.getTargetElement().toString().equals(reference.getValue())) ||
+//                        alignmentCorrespondence.getSourceElement().toString().equals(reference.getValue()) &&
+//                                alignmentCorrespondence.getTargetElement().toString().equals(reference.getKey())) {
+//                    elementIsPresent = true;
+//                }
+//            }
+//            if (!elementIsPresent && referenceAlignment.getCorrespondences().size() > 0)
+//                falseNegatives++;
+//        }
+
 
         for (Map.Entry<String, String> reference : referenceAlignment.getCorrespondences().entrySet()) {
             boolean elementIsPresent = false;
@@ -129,7 +171,7 @@ public class ExecutionService implements ItemProcessor<Input, Output>  {
                     elementIsPresent = true;
                 }
             }
-            if (!elementIsPresent)
+            if (!elementIsPresent && correspondences.size() > 0)
                 falseNegatives++;
         }
 
@@ -137,13 +179,21 @@ public class ExecutionService implements ItemProcessor<Input, Output>  {
         Output output = new Output();
         output.setMatcher(ontologyPair.getMatcher());
         output.setPairId(ontologyPair.getId());
-        output.setExecutionTime(endProcessing-startProcessing);
+        output.setExecutionTime(alignment.getExecutionTimeInMillis());
         output.setExpId(applicationConfig.getExpId());
-        output.setPrecision((double)truePositives / (double)(truePositives + falsePositives));
-        output.setRecall(Double.valueOf((double)truePositives / (double)(truePositives + falseNegatives)));
         output.setTruePositives(truePositives);
         output.setFalseNegatives(falseNegatives);
         output.setFalsePositives(falsePositives);
+        if (truePositives > 0) {
+            output.setPrecision((double) truePositives / (double) (truePositives + falsePositives));
+        } else {
+            output.setPrecision(0.0);
+        }
+        if (truePositives > 0) {
+            output.setRecall(Double.valueOf((double) truePositives / (double) (truePositives + falseNegatives)));
+        } else {
+            output.setRecall(0.0);
+        }
         if ((output.getRecall() + output.getPrecision()) > 0) {
             output.setfMeasure( 2 * (((double)output.getPrecision() * output.getRecall()) / (output.getPrecision() + output.getRecall())));
         } else {

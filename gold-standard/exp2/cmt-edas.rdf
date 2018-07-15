@@ -49,30 +49,7 @@
 									<relation>=</relation>
 								</Cell>
 							</map>
-							<map>
-								<Cell cid='5'>
-									<entity1 rdf:resource='http://cmt#hasConferenceMember'/>
-									<entity2 rdf:resource='http://edas#hasMember'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
-							<map>
-								<Cell cid='6'>
-									<entity1 rdf:resource='http://cmt#memberOfConference'/>
-									<entity2 rdf:resource='http://edas#isMemberOf'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
-							<map>
-								<Cell cid='7'>
-									<entity1 rdf:resource='http://cmt#ConferenceChair'/>
-									<entity2 rdf:resource='http://edas#ConferenceChair'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
+
 							<map>
 								<Cell cid='8'>
 									<entity1 rdf:resource='http://cmt#Review'/>
@@ -105,21 +82,6 @@
 									<relation>=</relation>
 								</Cell>
 							</map>
-							<map>
-								<Cell cid='12'>
-									<entity1 rdf:resource='http://cmt#hasBeenAssigned'/>
-									<entity2 rdf:resource='http://edas#isReviewing'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
-							<map>
-								<Cell cid='13'>
-									<entity1 rdf:resource='http://cmt#assignedTo'/>
-									<entity2 rdf:resource='http://edas#isReviewedBy'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
+
 							</Alignment>
 	</rdf:RDF>

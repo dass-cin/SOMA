@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+				<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+					 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+					 xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+				<Alignment>
+				<xml>yes</xml>
+				<level>0</level>
+				<type>??</type>
+				
+				<onto1>
+				<Ontology rdf:about="http://edas">
+				  <location>http://nb.vse.cz/~svabo/oaei2010/edas.owl</location>
+				</Ontology>
+				</onto1>
+				<onto2>
+				<Ontology rdf:about="http://sigkdd">
+				  <location>http://nb.vse.cz/~svabo/oaei2010/sigkdd.owl</location>
+				</Ontology>
+				</onto2>
+
+							<map>
+								<Cell cid='3'>
+									<entity1 rdf:resource='http://edas#Person'/>
+									<entity2 rdf:resource='http://sigkdd#Person'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+							<map>
+								<Cell cid='4'>
+									<entity1 rdf:resource='http://edas#hasName'/>
+									<entity2 rdf:resource='http://sigkdd#Name_of_conference'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+
+							<map>
+								<Cell cid='6'>
+									<entity1 rdf:resource='http://edas#Author'/>
+									<entity2 rdf:resource='http://sigkdd#Author'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+
+							<map>
+								<Cell cid='10'>
+									<entity1 rdf:resource='http://edas#Conference'/>
+									<entity2 rdf:resource='http://sigkdd#Conference'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+
+
+							<map>
+								<Cell cid='13'>
+									<entity1 rdf:resource='http://edas#Document'/>
+									<entity2 rdf:resource='http://sigkdd#Document'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+
+							</Alignment>
+	</rdf:RDF>

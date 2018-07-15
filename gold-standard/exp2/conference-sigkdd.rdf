@@ -25,14 +25,7 @@
 									<relation>=</relation>
 								</Cell>
 							</map>
-							<map>
-								<Cell cid='2'>
-									<entity1 rdf:resource='http://conference#Invited_speaker'/>
-									<entity2 rdf:resource='http://sigkdd#Invited_Speaker'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
+
 							<map>
 								<Cell cid='3'>
 									<entity1 rdf:resource='http://conference#Regular_author'/>
@@ -49,38 +42,7 @@
 									<relation>=</relation>
 								</Cell>
 							</map>
-							<map>
-								<Cell cid='5'>
-									<entity1 rdf:resource='http://conference#Program_committee'/>
-									<entity2 rdf:resource='http://sigkdd#Program_Committee'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
-							<map>
-								<Cell cid='6'>
-									<entity1 rdf:resource='http://conference#Conference_volume'/>
-									<entity2 rdf:resource='http://sigkdd#Conference'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
-							<map>
-								<Cell cid='7'>
-									<entity1 rdf:resource='http://conference#Conference_fees'/>
-									<entity2 rdf:resource='http://sigkdd#Fee'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
-							<map>
-								<Cell cid='8'>
-									<entity1 rdf:resource='http://conference#has_an_email'/>
-									<entity2 rdf:resource='http://sigkdd#E-mail'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
+
 							<map>
 								<Cell cid='9'>
 									<entity1 rdf:resource='http://conference#Paper'/>
@@ -89,14 +51,7 @@
 									<relation>=</relation>
 								</Cell>
 							</map>
-							<map>
-								<Cell cid='10'>
-									<entity1 rdf:resource='http://conference#Organizing_committee'/>
-									<entity2 rdf:resource='http://sigkdd#Organizing_Committee'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
+
 							<map>
 								<Cell cid='11'>
 									<entity1 rdf:resource='http://conference#Person'/>
@@ -105,30 +60,7 @@
 									<relation>=</relation>
 								</Cell>
 							</map>
-							<map>
-								<Cell cid='12'>
-									<entity1 rdf:resource='http://conference#Committee'/>
-									<entity2 rdf:resource='http://sigkdd#Committee'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
-							<map>
-								<Cell cid='13'>
-									<entity1 rdf:resource='http://conference#is_given_by'/>
-									<entity2 rdf:resource='http://sigkdd#presentationed_by'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
-							<map>
-								<Cell cid='14'>
-									<entity1 rdf:resource='http://conference#gives_presentations'/>
-									<entity2 rdf:resource='http://sigkdd#presentation'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
+
 							<map>
 								<Cell cid='15'>
 									<entity1 rdf:resource='http://conference#Conference_document'/>

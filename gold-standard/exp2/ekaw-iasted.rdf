@@ -21,24 +21,8 @@
 
 <map>
 	<Cell>
-		<entity1 rdf:resource="http://ekaw#Location"/>
-		<entity2 rdf:resource="http://iasted#Place"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
-<map>
-	<Cell>
 		<entity1 rdf:resource="http://ekaw#Document"/>
 		<entity2 rdf:resource="http://iasted#Document"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
-<map>
-	<Cell>
-		<entity1 rdf:resource="http://ekaw#Event"/>
-		<entity2 rdf:resource="http://iasted#Activity"/>
 		<measure rdf:datatype="xsd:float">1.0</measure>
 		<relation>=</relation>
 	</Cell>
@@ -61,40 +45,8 @@
 </map>
 <map>
 	<Cell>
-		<entity1 rdf:resource="http://ekaw#Session"/>
-		<entity2 rdf:resource="http://iasted#Session"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
-<map>
-	<Cell>
 		<entity1 rdf:resource="http://ekaw#Review"/>
 		<entity2 rdf:resource="http://iasted#Review"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
-<map>
-	<Cell>
-		<entity1 rdf:resource="http://ekaw#Conference_Banquet"/>
-		<entity2 rdf:resource="http://iasted#Dinner_banquet"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
-<map>
-	<Cell>
-		<entity1 rdf:resource="http://ekaw#Tutorial"/>
-		<entity2 rdf:resource="http://iasted#Tutorial"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
-<map>
-	<Cell>
-		<entity1 rdf:resource="http://ekaw#Session_Chair"/>
-		<entity2 rdf:resource="http://iasted#Session_chair"/>
 		<measure rdf:datatype="xsd:float">1.0</measure>
 		<relation>=</relation>
 	</Cell>

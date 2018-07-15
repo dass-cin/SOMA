@@ -61,7 +61,8 @@ public class BatchConfiguration {
     @Bean
     public FlatFileItemWriter<Output> writerCSV() {
         FlatFileItemWriter<Output> writer = new FlatFileItemWriter<>();
-        writer.setResource(new FileSystemResource("output.csv"));
+        String outputFile = "output_"+applicationConfig.getExpId()+".csv";
+        writer.setResource(new FileSystemResource(outputFile));
         writer.setHeaderCallback(w -> {
             w.write("experimentId,pairId,precision,recall,fMeasure,executionTime,matcher,truePositives,falsePositives,falseNegatives");
         });

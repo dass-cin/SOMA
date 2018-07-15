@@ -27,22 +27,7 @@
 		<relation>=</relation>
 	</Cell>
 </map>
-<map>
-	<Cell>
-		<entity1 rdf:resource="http://confOf#Member_PC"/>
-		<entity2 rdf:resource="http://sigkdd#Program_Committee_member"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
-<map>
-	<Cell>
-		<entity1 rdf:resource="http://confOf#hasEmail"/>
-		<entity2 rdf:resource="http://sigkdd#E-mail"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
+
 <map>
 	<Cell>
 		<entity1 rdf:resource="http://confOf#Author"/>
@@ -59,14 +44,7 @@
 		<relation>=</relation>
 	</Cell>
 </map>
-<map>
-	<Cell>
-		<entity1 rdf:resource="http://confOf#Chair_PC"/>
-		<entity2 rdf:resource="http://sigkdd#Program_Chair"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
+
 <map>
 	<Cell>
 		<entity1 rdf:resource="http://confOf#Paper"/>

@@ -52,26 +52,11 @@
 		<relation>=</relation>
 	</Cell>
 </map>
-<map>
-	<Cell>
-		<entity1 rdf:resource="http://cmt#Administrator"/>
-		<entity2 rdf:resource="http://confOf#Administrator"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
+
 <map>
 	<Cell>
 		<entity1 rdf:resource="http://cmt#title"/>
 		<entity2 rdf:resource="http://confOf#hasTitle"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
-<map>
-	<Cell>
-		<entity1 rdf:resource="http://cmt#SubjectArea"/>
-		<entity2 rdf:resource="http://confOf#Topic"/>
 		<measure rdf:datatype="xsd:float">1.0</measure>
 		<relation>=</relation>
 	</Cell>
@@ -84,14 +69,7 @@
 		<relation>=</relation>
 	</Cell>
 </map>
-<map>
-	<Cell>
-		<entity1 rdf:resource="http://cmt#hasBeenAssigned"/>
-		<entity2 rdf:resource="http://confOf#reviewes"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
+
 <map>
 	<Cell>
 		<entity1 rdf:resource="http://cmt#hasAuthor"/>
@@ -104,14 +82,6 @@
 	<Cell>
 		<entity1 rdf:resource="http://cmt#Conference"/>
 		<entity2 rdf:resource="http://confOf#Conference"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
-<map>
-	<Cell>
-		<entity1 rdf:resource="http://cmt#ProgramCommitteeMember"/>
-		<entity2 rdf:resource="http://confOf#Member_PC"/>
 		<measure rdf:datatype="xsd:float">1.0</measure>
 		<relation>=</relation>
 	</Cell>
@@ -136,14 +106,6 @@
 	<Cell>
 		<entity1 rdf:resource="http://cmt#Paper"/>
 		<entity2 rdf:resource="http://confOf#Contribution"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
-<map>
-	<Cell>
-		<entity1 rdf:resource="http://cmt#email"/>
-		<entity2 rdf:resource="http://confOf#hasEmail"/>
 		<measure rdf:datatype="xsd:float">1.0</measure>
 		<relation>=</relation>
 	</Cell>

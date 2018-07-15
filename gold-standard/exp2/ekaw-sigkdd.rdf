@@ -53,32 +53,8 @@
 </map>
 <map>
 	<Cell>
-		<entity1 rdf:resource="http://ekaw#Invited_Speaker"/>
-		<entity2 rdf:resource="http://sigkdd#Invited_Speaker"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
-<map>
-	<Cell>
-		<entity1 rdf:resource="http://ekaw#OC_Member"/>
-		<entity2 rdf:resource="http://sigkdd#Organizing_Committee_member"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
-<map>
-	<Cell>
 		<entity1 rdf:resource="http://ekaw#Abstract"/>
 		<entity2 rdf:resource="http://sigkdd#Abstract"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
-<map>
-	<Cell>
-		<entity1 rdf:resource="http://ekaw#PC_Chair"/>
-		<entity2 rdf:resource="http://sigkdd#Program_Chair"/>
 		<measure rdf:datatype="xsd:float">1.0</measure>
 		<relation>=</relation>
 	</Cell>
@@ -95,14 +71,6 @@
 	<Cell>
 		<entity1 rdf:resource="http://ekaw#Document"/>
 		<entity2 rdf:resource="http://sigkdd#Document"/>
-		<measure rdf:datatype="xsd:float">1.0</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
-<map>
-	<Cell>
-		<entity1 rdf:resource="http://ekaw#Location"/>
-		<entity2 rdf:resource="http://sigkdd#Place"/>
 		<measure rdf:datatype="xsd:float">1.0</measure>
 		<relation>=</relation>
 	</Cell>

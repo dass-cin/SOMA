@@ -17,22 +17,7 @@
 				  <location>http://nb.vse.cz/~svabo/oaei2010/ekaw.owl</location>
 				</Ontology>
 				</onto2>
-							<map>
-								<Cell cid='1'>
-									<entity1 rdf:resource='http://edas#ConferenceDinner'/>
-									<entity2 rdf:resource='http://ekaw#Conference_Banquet'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
-							<map>
-								<Cell cid='2'>
-									<entity1 rdf:resource='http://edas#AcademicEvent'/>
-									<entity2 rdf:resource='http://ekaw#Scientific_Event'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
+
 							<map>
 								<Cell cid='3'>
 									<entity1 rdf:resource='http://edas#AcceptedPaper'/>
@@ -49,30 +34,7 @@
 									<relation>=</relation>
 								</Cell>
 							</map>
-							<map>
-								<Cell cid='5'>
-									<entity1 rdf:resource='http://edas#Place'/>
-									<entity2 rdf:resource='http://ekaw#Location'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
-							<map>
-								<Cell cid='6'>
-									<entity1 rdf:resource='http://edas#AcademiaOrganization'/>
-									<entity2 rdf:resource='http://ekaw#Academic_Institution'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
-							<map>
-								<Cell cid='7'>
-									<entity1 rdf:resource='http://edas#SocialEvent'/>
-									<entity2 rdf:resource='http://ekaw#Social_Event'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
+
 							<map>
 								<Cell cid='8'>
 									<entity1 rdf:resource='http://edas#isReviewing'/>
@@ -81,14 +43,7 @@
 									<relation>=</relation>
 								</Cell>
 							</map>
-							<map>
-								<Cell cid='9'>
-									<entity1 rdf:resource='http://edas#Organization'/>
-									<entity2 rdf:resource='http://ekaw#Organisation'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
+
 							<map>
 								<Cell cid='10'>
 									<entity1 rdf:resource='http://edas#Author'/>
@@ -97,14 +52,7 @@
 									<relation>=</relation>
 								</Cell>
 							</map>
-							<map>
-								<Cell cid='11'>
-									<entity1 rdf:resource='http://edas#isLocationOf'/>
-									<entity2 rdf:resource='http://ekaw#locationOf'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
+
 							<map>
 								<Cell cid='12'>
 									<entity1 rdf:resource='http://edas#Topic'/>
@@ -129,22 +77,7 @@
 									<relation>=</relation>
 								</Cell>
 							</map>
-							<map>
-								<Cell cid='15'>
-									<entity1 rdf:resource='http://edas#ConferenceEvent'/>
-									<entity2 rdf:resource='http://ekaw#Event'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
-							<map>
-								<Cell cid='16'>
-									<entity1 rdf:resource='http://edas#SessionChair'/>
-									<entity2 rdf:resource='http://ekaw#Session_Chair'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
+
 							<map>
 								<Cell cid='17'>
 									<entity1 rdf:resource='http://edas#Person'/>
@@ -153,14 +86,7 @@
 									<relation>=</relation>
 								</Cell>
 							</map>
-							<map>
-								<Cell cid='18'>
-									<entity1 rdf:resource='http://edas#Programme'/>
-									<entity2 rdf:resource='http://ekaw#Programme_Brochure'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
+
 							<map>
 								<Cell cid='19'>
 									<entity1 rdf:resource='http://edas#Review'/>
@@ -169,14 +95,7 @@
 									<relation>=</relation>
 								</Cell>
 							</map>
-							<map>
-								<Cell cid='20'>
-									<entity1 rdf:resource='http://edas#Workshop'/>
-									<entity2 rdf:resource='http://ekaw#Workshop'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
+
 							<map>
 								<Cell cid='21'>
 									<entity1 rdf:resource='http://edas#Paper'/>
@@ -185,22 +104,7 @@
 									<relation>=</relation>
 								</Cell>
 							</map>
-							<map>
-								<Cell cid='27'>
-									<entity1 rdf:resource='http://edas#Attendee'/>
-									<entity2 rdf:resource='http://ekaw#Conference_Participant'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
-							<map>
-								<Cell cid='29'>
-									<entity1 rdf:resource='http://edas#hasLocation'/>
-									<entity2 rdf:resource='http://ekaw#heldIn'/>
-									<measure rdf:datatype='xsd:float'>1.0</measure>
-									<relation>=</relation>
-								</Cell>
-							</map>
+
 
 							</Alignment>
 	</rdf:RDF>

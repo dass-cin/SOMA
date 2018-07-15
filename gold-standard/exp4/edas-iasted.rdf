@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8'?>
+				<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+					 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+					 xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+				<Alignment>
+				<xml>yes</xml>
+				<level>0</level>
+				<type>??</type>
+				
+				<onto1>
+				<Ontology rdf:about="http://edas">
+				  <location>http://nb.vse.cz/~svabo/oaei2010/edas.owl</location>
+				</Ontology>
+				</onto1>
+				<onto2>
+				<Ontology rdf:about="http://iasted">
+				  <location>http://nb.vse.cz/~svabo/oaei2010/iasted.owl</location>
+				</Ontology>
+				</onto2>
+							<map>
+								<Cell cid='1'>
+									<entity1 rdf:resource='http://edas#Place'/>
+									<entity2 rdf:resource='http://iasted#Place'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+							<map>
+								<Cell cid='2'>
+									<entity1 rdf:resource='http://edas#SessionChair'/>
+									<entity2 rdf:resource='http://iasted#Session_chair'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+
+							<map>
+								<Cell cid='4'>
+									<entity1 rdf:resource='http://edas#Document'/>
+									<entity2 rdf:resource='http://iasted#Document'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+							<map>
+								<Cell cid='5'>
+									<entity1 rdf:resource='http://edas#Country'/>
+									<entity2 rdf:resource='http://iasted#State'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+
+							<map>
+								<Cell cid='9'>
+									<entity1 rdf:resource='http://edas#Attendee'/>
+									<entity2 rdf:resource='http://iasted#Delegate'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+
+							<map>
+								<Cell cid='11'>
+									<entity1 rdf:resource='http://edas#SocialEvent'/>
+									<entity2 rdf:resource='http://iasted#Social_program'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+
+							<map>
+								<Cell cid='15'>
+									<entity1 rdf:resource='http://edas#ConferenceEvent'/>
+									<entity2 rdf:resource='http://iasted#Conference_activity'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+
+							<map>
+								<Cell cid='20'>
+									<entity1 rdf:resource='http://edas#ConferenceVenuePlace'/>
+									<entity2 rdf:resource='http://iasted#Conference_building'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+							<map>
+								<Cell cid='22'>
+									<entity1 rdf:resource='http://edas#DiningPlace'/>
+									<entity2 rdf:resource='http://iasted#Conference_restaurant'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+							</Alignment>
+	</rdf:RDF>

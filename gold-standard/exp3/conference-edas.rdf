@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+				<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+					 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+					 xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+				<Alignment>
+				<xml>yes</xml>
+				<level>0</level>
+				<type>??</type>
+				
+				<onto1>
+				<Ontology rdf:about="http://conference">
+				  <location>http://nb.vse.cz/~svabo/oaei2010/Conference.owl</location>
+				</Ontology>
+				</onto1>
+				<onto2>
+				<Ontology rdf:about="http://edas">
+				  <location>http://nb.vse.cz/~svabo/oaei2010/edas.owl</location>
+				</Ontology>
+				</onto2>
+							<map>
+								<Cell cid='3'>
+									<entity1 rdf:resource='http://conference#Person'/>
+									<entity2 rdf:resource='http://edas#Person'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+
+							<map>
+								<Cell cid='6'>
+									<entity1 rdf:resource='http://conference#Reviewer'/>
+									<entity2 rdf:resource='http://edas#Reviewer'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+							<map>
+								<Cell cid='7'>
+									<entity1 rdf:resource='http://conference#has_the_first_name'/>
+									<entity2 rdf:resource='http://edas#hasFirstName'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+							<map>
+								<Cell cid='8'>
+									<entity1 rdf:resource='http://conference#Conference_part'/>
+									<entity2 rdf:resource='http://edas#ConferenceEvent'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+
+
+
+							<map>
+								<Cell cid='13'>
+									<entity1 rdf:resource='http://conference#has_the_last_name'/>
+									<entity2 rdf:resource='http://edas#hasLastName'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+
+
+							<map>
+								<Cell cid='19'>
+									<entity1 rdf:resource='http://conference#Regular_author'/>
+									<entity2 rdf:resource='http://edas#Author'/>
+									<measure rdf:datatype='xsd:float'>1.0</measure>
+									<relation>=</relation>
+								</Cell>
+							</map>
+							<map>
+                                <Cell cid='17'>
+                                    <entity1 rdf:resource='http://conference#Topic'/>
+                                    <entity2 rdf:resource='http://edas#Topic'/>
+                                    <measure rdf:datatype='xsd:float'>1.0</measure>
+                                    <relation>=</relation>
+                                </Cell>
+                            </map>
+
+                            <map>
+                                <Cell cid='19'>
+                                    <entity1 rdf:resource='http://conference#Conference'/>
+                                    <entity2 rdf:resource='http://edas#Conference'/>
+                                    <measure rdf:datatype='xsd:float'>1.0</measure>
+                                    <relation>=</relation>
+                                </Cell>
+                            </map>
+
+                             <map>
+                                <Cell cid='20'>
+                                    <entity1 rdf:resource='http://conference#Chair'/>
+                                    <entity2 rdf:resource='http://edas#ConferenceChair'/>
+                                    <measure rdf:datatype='xsd:float'>1.0</measure>
+                                    <relation>=</relation>
+                                </Cell>
+                            </map>
+
+
+							</Alignment>
+	</rdf:RDF>
