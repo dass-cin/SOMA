@@ -19,7 +19,6 @@ import org.springframework.context.annotation.Bean;
  **/
 @SpringBootApplication(scanBasePackageClasses = SomaApplication.class)
 @EnableBatchProcessing
-@EnableAutoConfiguration()
 @EnableFeignClients
 @EnableConfigurationProperties({ApplicationConfig.class})
 public class SomaApplication {

@@ -14,7 +14,7 @@ import java.util.List;
 public interface MatcherCatalogClient {
 
     @PostMapping("/alignment")
-    ResponseEntity<Alignment> align(@RequestParam("ontology1") String ontology1Path, @RequestParam("ontology2") String ontology2Path, @RequestParam("matcher") String matcher);
+    ResponseEntity<Alignment> align(@RequestParam("ontology1") String ontology1Path, @RequestParam("ontology2") String ontology2Path, @RequestParam("matcher") String matcher, @RequestParam("experiment") String experiment);
 
     @GetMapping("/matcher")
     ResponseEntity<List<Matcher>> listMatchers();

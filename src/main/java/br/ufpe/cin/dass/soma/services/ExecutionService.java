@@ -107,7 +107,7 @@ public class ExecutionService implements ItemProcessor<Input, Output>  {
             targetOntology = segmentTargetFile;
         }
 
-        ResponseEntity<Alignment> alignmentResponseEntity = matcherCatalogClient.align(sourceOntology, targetOntology, ontologyPair.getMatcher());
+        ResponseEntity<Alignment> alignmentResponseEntity = matcherCatalogClient.align(sourceOntology, targetOntology, ontologyPair.getMatcher(), applicationConfig.getExpId());
         if (!alignmentResponseEntity.getStatusCode().equals(HttpStatus.OK)) {
             throw new Exception(String.format("Fail to execute alignment for matcher %s", ontologyPair.getMatcher()));
         }
@@ -126,7 +126,8 @@ public class ExecutionService implements ItemProcessor<Input, Output>  {
 
 
 
-        Set<Correspondence> correspondences = alignment.getCorrespondences().stream().filter(c -> c.getSimilarityValue() >= applicationConfig.getMatchingThreshold()).collect(Collectors.toSet());
+        Set<Correspondence> correspondences = alignment.getCorrespondences().stream().
+                filter(c -> c.getSimilarityValue() >= applicationConfig.getMatchingThreshold()).collect(Collectors.toSet());
 
         for (Correspondence correspondence : correspondences) {
             String sourceElement = correspondence.getSourceElement().toString(); //http://cmt#adjustedBy
