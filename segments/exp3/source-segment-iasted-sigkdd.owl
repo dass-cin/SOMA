@@ -1,0 +1,512 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://iasted#"
+     xml:base="http://iasted"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://iasted#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #give -->
+
+
+    <owl:ObjectProperty rdf:about="#give">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #is_given_by -->
+
+
+    <owl:ObjectProperty rdf:about="#is_given_by">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #is_given_to -->
+
+
+    <owl:ObjectProperty rdf:about="#is_given_to">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #is_needed_for -->
+
+
+    <owl:ObjectProperty rdf:about="#is_needed_for">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #is_occupied_by -->
+
+
+    <owl:ObjectProperty rdf:about="#is_occupied_by">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #is_paid_by -->
+
+
+    <owl:ObjectProperty rdf:about="#is_paid_by">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #is_prepared_by -->
+
+
+    <owl:ObjectProperty rdf:about="#is_prepared_by">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #is_present -->
+
+
+    <owl:ObjectProperty rdf:about="#is_present">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #is_present_in -->
+
+
+    <owl:ObjectProperty rdf:about="#is_present_in">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #is_sent_by -->
+
+
+    <owl:ObjectProperty rdf:about="#is_sent_by">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #is_signed_by -->
+
+
+    <owl:ObjectProperty rdf:about="#is_signed_by">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #is_used_by -->
+
+
+    <owl:ObjectProperty rdf:about="#is_used_by">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #is_visited_by -->
+
+
+    <owl:ObjectProperty rdf:about="#is_visited_by">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #is_writen_by -->
+
+
+    <owl:ObjectProperty rdf:about="#is_writen_by">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #need -->
+
+
+    <owl:ObjectProperty rdf:about="#need">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #obtain -->
+
+
+    <owl:ObjectProperty rdf:about="#obtain">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #occupy -->
+
+
+    <owl:ObjectProperty rdf:about="#occupy">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #pay -->
+
+
+    <owl:ObjectProperty rdf:about="#pay">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #prepare -->
+
+
+    <owl:ObjectProperty rdf:about="#prepare">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #send -->
+
+
+    <owl:ObjectProperty rdf:about="#send">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #sign -->
+
+
+    <owl:ObjectProperty rdf:about="#sign">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #speak_in -->
+
+
+    <owl:ObjectProperty rdf:about="#speak_in">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #write -->
+
+
+    <owl:ObjectProperty rdf:about="#write">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #Author -->
+
+
+    <owl:Class rdf:about="#Author">
+        <rdfs:subClassOf rdf:resource="#Author_book_proceedings_included"/>
+        <rdfs:subClassOf rdf:resource="#Author_cd_proceedings_included"/>
+        <rdfs:subClassOf rdf:resource="#Lecturer"/>
+        <rdfs:subClassOf rdf:resource="#Plenary_lecture_speaker"/>
+        <rdfs:subClassOf rdf:resource="#Speaker"/>
+        <rdfs:subClassOf rdf:resource="#Tutorial_speaker"/>
+    </owl:Class>
+    
+
+
+    <!-- #Author_attendee_book_registration_fee -->
+
+
+    <owl:Class rdf:about="#Author_attendee_book_registration_fee">
+        <rdfs:subClassOf rdf:resource="#Registration_fee"/>
+    </owl:Class>
+    
+
+
+    <!-- #Author_attendee_cd_registration_fee -->
+
+
+    <owl:Class rdf:about="#Author_attendee_cd_registration_fee">
+        <rdfs:subClassOf rdf:resource="#Registration_fee"/>
+    </owl:Class>
+    
+
+
+    <!-- #Author_book_proceedings_included -->
+
+
+    <owl:Class rdf:about="#Author_book_proceedings_included">
+        <rdfs:subClassOf rdf:resource="#Author"/>
+    </owl:Class>
+    
+
+
+    <!-- #Author_cd_proceedings_included -->
+
+
+    <owl:Class rdf:about="#Author_cd_proceedings_included">
+        <rdfs:subClassOf rdf:resource="#Author"/>
+    </owl:Class>
+    
+
+
+    <!-- #Author_information_form -->
+
+
+    <owl:Class rdf:about="#Author_information_form">
+        <rdfs:subClassOf rdf:resource="#Form"/>
+    </owl:Class>
+    
+
+
+    <!-- #Building -->
+
+
+    <owl:Class rdf:about="#Building"/>
+    
+
+
+    <!-- #Conference_Hiker -->
+
+
+    <owl:Class rdf:about="#Conference_Hiker"/>
+    
+
+
+    <!-- #Delegate -->
+
+
+    <owl:Class rdf:about="#Delegate">
+        <rdfs:subClassOf rdf:resource="#Conference_Hiker"/>
+        <rdfs:subClassOf rdf:resource="#Hotel_presenter"/>
+        <rdfs:subClassOf rdf:resource="#IASTED_member"/>
+        <rdfs:subClassOf rdf:resource="#IASTED_non_member"/>
+        <rdfs:subClassOf rdf:resource="#Item"/>
+        <rdfs:subClassOf rdf:resource="#Listener"/>
+        <rdfs:subClassOf rdf:resource="#Non_speaker"/>
+        <rdfs:subClassOf rdf:resource="#One_day_presenter"/>
+        <rdfs:subClassOf rdf:resource="#Person"/>
+        <rdfs:subClassOf rdf:resource="#Session_chair"/>
+        <rdfs:subClassOf rdf:resource="#Speaker"/>
+        <rdfs:subClassOf rdf:resource="#Technical_commitee"/>
+    </owl:Class>
+    
+
+
+    <!-- #Form -->
+
+
+    <owl:Class rdf:about="#Form"/>
+    
+
+
+    <!-- #Hotel_presenter -->
+
+
+    <owl:Class rdf:about="#Hotel_presenter"/>
+    
+
+
+    <!-- #IASTED_member -->
+
+
+    <owl:Class rdf:about="#IASTED_member"/>
+    
+
+
+    <!-- #IASTED_non_member -->
+
+
+    <owl:Class rdf:about="#IASTED_non_member"/>
+    
+
+
+    <!-- #Item -->
+
+
+    <owl:Class rdf:about="#Item"/>
+    
+
+
+    <!-- #Lecturer -->
+
+
+    <owl:Class rdf:about="#Lecturer">
+        <rdfs:subClassOf rdf:resource="#Author"/>
+        <rdfs:subClassOf rdf:resource="#Student_lecturer"/>
+        <rdfs:subClassOf rdf:resource="#Worker_lecturer"/>
+    </owl:Class>
+    
+
+
+    <!-- #Listener -->
+
+
+    <owl:Class rdf:about="#Listener"/>
+    
+
+
+    <!-- #Non_speaker -->
+
+
+    <owl:Class rdf:about="#Non_speaker"/>
+    
+
+
+    <!-- #Nonauthor_registration_fee -->
+
+
+    <owl:Class rdf:about="#Nonauthor_registration_fee">
+        <rdfs:subClassOf rdf:resource="#Registration_fee"/>
+    </owl:Class>
+    
+
+
+    <!-- #One_day_presenter -->
+
+
+    <owl:Class rdf:about="#One_day_presenter"/>
+    
+
+
+    <!-- #Person -->
+
+
+    <owl:Class rdf:about="#Person">
+        <rdfs:subClassOf rdf:resource="#Delegate"/>
+        <rdfs:subClassOf rdf:resource="#Sponsor"/>
+        <rdfs:subClassOf rdf:resource="#owl:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- #Plenary_lecture_speaker -->
+
+
+    <owl:Class rdf:about="#Plenary_lecture_speaker">
+        <rdfs:subClassOf rdf:resource="#Author"/>
+    </owl:Class>
+    
+
+
+    <!-- #Presenter_university -->
+
+
+    <owl:Class rdf:about="#Presenter_university">
+        <rdfs:subClassOf rdf:resource="#Building"/>
+    </owl:Class>
+    
+
+
+    <!-- #Registration_fee -->
+
+
+    <owl:Class rdf:about="#Registration_fee"/>
+    
+
+
+    <!-- #Session_chair -->
+
+
+    <owl:Class rdf:about="#Session_chair"/>
+    
+
+
+    <!-- #Speaker -->
+
+
+    <owl:Class rdf:about="#Speaker"/>
+    
+
+
+    <!-- #Sponsor -->
+
+
+    <owl:Class rdf:about="#Sponsor">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- #Student_lecturer -->
+
+
+    <owl:Class rdf:about="#Student_lecturer"/>
+    
+
+
+    <!-- #Technical_commitee -->
+
+
+    <owl:Class rdf:about="#Technical_commitee"/>
+    
+
+
+    <!-- #Tutorial_speaker -->
+
+
+    <owl:Class rdf:about="#Tutorial_speaker">
+        <rdfs:subClassOf rdf:resource="#Author"/>
+    </owl:Class>
+    
+
+
+    <!-- #Worker_lecturer -->
+
+
+    <owl:Class rdf:about="#Worker_lecturer"/>
+    
+
+
+    <!-- #owl:Thing -->
+
+
+    <owl:Class rdf:about="#owl:Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.4.2018-01-04T07:01:37Z) https://github.com/owlcs/owlapi/ -->
+
+

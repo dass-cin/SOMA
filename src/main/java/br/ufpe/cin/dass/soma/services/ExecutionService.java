@@ -96,112 +96,115 @@ public class ExecutionService implements ItemProcessor<Input, Output>  {
 
         }
 
-        String sourceOntology = segmentSourceFile;
+        if (applicationConfig.isAlignmentEnabled()) {
 
-//        if (!segmentSourceFile.isEmpty()) {
-//            sourceOntology = segmentSourceFile;
-//        }
+            String sourceOntology = ontologyPair.getSourceOntology();
 
-        String targetOntology = ontologyPair.getTargetOntology();
-        if (!segmentTargetFile.isEmpty()) {
-            targetOntology = segmentTargetFile;
-        }
-
-        ResponseEntity<Alignment> alignmentResponseEntity = matcherCatalogClient.align(sourceOntology, targetOntology, ontologyPair.getMatcher(), applicationConfig.getExpId());
-        if (!alignmentResponseEntity.getStatusCode().equals(HttpStatus.OK)) {
-            throw new Exception(String.format("Fail to execute alignment for matcher %s", ontologyPair.getMatcher()));
-        }
-
-        Alignment alignment = alignmentResponseEntity.getBody();
-
-        if (alignment == null || alignment.getCorrespondences() == null) {
-            return null;
-        }
-
-        ReferenceAlignment referenceAlignment = evaluationService.loadReferenceAlignment(ontologyPair.getId());
-
-        int truePositives = 0;
-        int falsePositives = 0;
-        int falseNegatives = 0;
-
-
-
-        Set<Correspondence> correspondences = alignment.getCorrespondences().stream().
-                filter(c -> c.getSimilarityValue() >= applicationConfig.getMatchingThreshold()).collect(Collectors.toSet());
-
-        for (Correspondence correspondence : correspondences) {
-            String sourceElement = correspondence.getSourceElement().toString(); //http://cmt#adjustedBy
-            String targetElement = correspondence.getTargetElement().toString();
-            if ((referenceAlignment.getCorrespondences().containsKey(sourceElement)
-                    && referenceAlignment.getCorrespondences().containsValue(targetElement)) ||
-                    (referenceAlignment.getCorrespondences().containsKey(targetElement))
-                            && referenceAlignment.getCorrespondences().containsValue(sourceElement)) {
-                truePositives++;
-            }
-            if ((!referenceAlignment.getCorrespondences().containsKey(sourceElement) &&
-                    !referenceAlignment.getCorrespondences().containsValue(targetElement)) &&
-                    !referenceAlignment.getCorrespondences().containsValue(sourceElement) &&
-                    !referenceAlignment.getCorrespondences().containsKey(targetElement)) {
-                falsePositives++;
+            if (!segmentSourceFile.isEmpty()) {
+                sourceOntology = segmentSourceFile;
             }
 
-        }
+            String targetOntology = ontologyPair.getTargetOntology();
+            if (!segmentTargetFile.isEmpty()) {
+                targetOntology = segmentTargetFile;
+            }
 
-//        for(Correspondence alignmentCorrespondence : correspondences) {
-//            boolean elementIsPresent = false;
-//            for (Map.Entry<String, String> reference : referenceAlignment.getCorrespondences().entrySet()) {
-//                if ((alignmentCorrespondence.getSourceElement().toString().equals(reference.getKey()) &&
-//                        alignmentCorrespondence.getTargetElement().toString().equals(reference.getValue())) ||
-//                        alignmentCorrespondence.getSourceElement().toString().equals(reference.getValue()) &&
-//                                alignmentCorrespondence.getTargetElement().toString().equals(reference.getKey())) {
-//                    elementIsPresent = true;
-//                }
-//            }
-//            if (!elementIsPresent && referenceAlignment.getCorrespondences().size() > 0)
-//                falseNegatives++;
-//        }
+            ResponseEntity<Alignment> alignmentResponseEntity = matcherCatalogClient.align(sourceOntology, targetOntology, ontologyPair.getMatcher(), applicationConfig.getExpId());
+            if (!alignmentResponseEntity.getStatusCode().equals(HttpStatus.OK)) {
+                throw new Exception(String.format("Fail to execute alignment for matcher %s", ontologyPair.getMatcher()));
+            }
+
+            Alignment alignment = alignmentResponseEntity.getBody();
+
+            if (alignment == null || alignment.getCorrespondences() == null) {
+                return null;
+            }
+
+            ReferenceAlignment referenceAlignment = evaluationService.loadReferenceAlignment(ontologyPair.getId());
+
+            int truePositives = 0;
+            int falsePositives = 0;
+            int falseNegatives = 0;
 
 
-        for (Map.Entry<String, String> reference : referenceAlignment.getCorrespondences().entrySet()) {
-            boolean elementIsPresent = false;
-            for (Correspondence alignmentCorrespondence : correspondences) {
-                if ((alignmentCorrespondence.getSourceElement().toString().equals(reference.getKey()) &&
-                        alignmentCorrespondence.getTargetElement().toString().equals(reference.getValue())) ||
-                        alignmentCorrespondence.getSourceElement().toString().equals(reference.getValue()) &&
-                                alignmentCorrespondence.getTargetElement().toString().equals(reference.getKey())) {
-                    elementIsPresent = true;
+
+            Set<Correspondence> correspondences = alignment.getCorrespondences().stream().
+                    filter(c -> c.getSimilarityValue() >= applicationConfig.getMatchingThreshold()).collect(Collectors.toSet());
+
+            for (Correspondence correspondence : correspondences) {
+                String sourceElement = correspondence.getSourceElement().toString(); //http://cmt#adjustedBy
+                String targetElement = correspondence.getTargetElement().toString();
+                if ((referenceAlignment.getCorrespondences().containsKey(sourceElement)
+                        && referenceAlignment.getCorrespondences().containsValue(targetElement)) ||
+                        (referenceAlignment.getCorrespondences().containsKey(targetElement))
+                                && referenceAlignment.getCorrespondences().containsValue(sourceElement)) {
+                    truePositives++;
                 }
+                if ((!referenceAlignment.getCorrespondences().containsKey(sourceElement) &&
+                        !referenceAlignment.getCorrespondences().containsValue(targetElement)) &&
+                        !referenceAlignment.getCorrespondences().containsValue(sourceElement) &&
+                        !referenceAlignment.getCorrespondences().containsKey(targetElement)) {
+                    falsePositives++;
+                }
+
             }
-            if (!elementIsPresent && correspondences.size() > 0)
-                falseNegatives++;
-        }
+
+    //        for(Correspondence alignmentCorrespondence : correspondences) {
+    //            boolean elementIsPresent = false;
+    //            for (Map.Entry<String, String> reference : referenceAlignment.getCorrespondences().entrySet()) {
+    //                if ((alignmentCorrespondence.getSourceElement().toString().equals(reference.getKey()) &&
+    //                        alignmentCorrespondence.getTargetElement().toString().equals(reference.getValue())) ||
+    //                        alignmentCorrespondence.getSourceElement().toString().equals(reference.getValue()) &&
+    //                                alignmentCorrespondence.getTargetElement().toString().equals(reference.getKey())) {
+    //                    elementIsPresent = true;
+    //                }
+    //            }
+    //            if (!elementIsPresent && referenceAlignment.getCorrespondences().size() > 0)
+    //                falseNegatives++;
+    //        }
 
 
-        Output output = new Output();
-        output.setMatcher(ontologyPair.getMatcher());
-        output.setPairId(ontologyPair.getId());
-        output.setExecutionTime(alignment.getExecutionTimeInMillis());
-        output.setExpId(applicationConfig.getExpId());
-        output.setTruePositives(truePositives);
-        output.setFalseNegatives(falseNegatives);
-        output.setFalsePositives(falsePositives);
-        if (truePositives > 0) {
-            output.setPrecision((double) truePositives / (double) (truePositives + falsePositives));
-        } else {
-            output.setPrecision(0.0);
-        }
-        if (truePositives > 0) {
-            output.setRecall(Double.valueOf((double) truePositives / (double) (truePositives + falseNegatives)));
-        } else {
-            output.setRecall(0.0);
-        }
-        if ((output.getRecall() + output.getPrecision()) > 0) {
-            output.setfMeasure( 2 * (((double)output.getPrecision() * output.getRecall()) / (output.getPrecision() + output.getRecall())));
-        } else {
-            output.setfMeasure(0.0);
+            for (Map.Entry<String, String> reference : referenceAlignment.getCorrespondences().entrySet()) {
+                boolean elementIsPresent = false;
+                for (Correspondence alignmentCorrespondence : correspondences) {
+                    if ((alignmentCorrespondence.getSourceElement().toString().equals(reference.getKey()) &&
+                            alignmentCorrespondence.getTargetElement().toString().equals(reference.getValue())) ||
+                            alignmentCorrespondence.getSourceElement().toString().equals(reference.getValue()) &&
+                                    alignmentCorrespondence.getTargetElement().toString().equals(reference.getKey())) {
+                        elementIsPresent = true;
+                    }
+                }
+                if (!elementIsPresent && correspondences.size() > 0)
+                    falseNegatives++;
+            }
+
+
+            Output output = new Output();
+            output.setMatcher(ontologyPair.getMatcher());
+            output.setPairId(ontologyPair.getId());
+            output.setExecutionTime(alignment.getExecutionTimeInMillis());
+            output.setExpId(applicationConfig.getExpId());
+            output.setTruePositives(truePositives);
+            output.setFalseNegatives(falseNegatives);
+            output.setFalsePositives(falsePositives);
+            if (truePositives > 0) {
+                output.setPrecision((double) truePositives / (double) (truePositives + falsePositives));
+            } else {
+                output.setPrecision(0.0);
+            }
+            if (truePositives > 0) {
+                output.setRecall(Double.valueOf((double) truePositives / (double) (truePositives + falseNegatives)));
+            } else {
+                output.setRecall(0.0);
+            }
+            if ((output.getRecall() + output.getPrecision()) > 0) {
+                output.setfMeasure( 2 * (((double)output.getPrecision() * output.getRecall()) / (output.getPrecision() + output.getRecall())));
+            } else {
+                output.setfMeasure(0.0);
+            }
         }
 
-        return output;
+        return null;
     }
 
 }

@@ -1,24 +1,30 @@
+/***
+ * @author Diego E. R. Pessoa (derp@cin.ufpe.br)
+ * Copyright (C) 2018
+
+ * Services regarding the implementation of SOMA algorithm
+ */
+
 package br.ufpe.cin.dass.soma.services;
 
 import br.ufpe.cin.dass.soma.client.OntologyCatalogClient;
-import br.ufpe.cin.dass.soma.error.CouldNotImportOntologyException;
 import br.ufpe.cin.dass.soma.util.Utils;
-import jdk.internal.org.objectweb.asm.tree.ClassNode;
 import org.semanticweb.HermiT.Reasoner;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
-import org.semanticweb.owlapi.util.DefaultPrefixManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
 import java.net.URI;
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import static br.ufpe.cin.dass.soma.services.SOMAService.SegmentGenerationExtension.EXPANDED;
 
@@ -38,8 +44,6 @@ public class SOMAService {
     public enum SegmentGenerationExtension { SIMPLE, EXPANDED}
 
     public String generateSourceOntologySegmentQuery(URI souceOntology, Set<String> keywords, SegmentGenerationExtension extension) {
-
-//        ArrayList<Map<String, Object>> ontologySegment = null;
 
         String ontologyName = Utils.getOntologyNameFromURI(souceOntology);
 
@@ -98,10 +102,6 @@ public class SOMAService {
             }
         }
         log.info("segment generation query = \n {}", query.toString());
-//        ResponseEntity<?> result = ontologyCatalog.getQueryResult(query.toString());
-//        if (result.getStatusCode().equals(HttpStatus.OK)) {
-//            ontologySegment = (ArrayList<Map<String, Object>>) result.getBody();
-//        }
 
         return query.toString();
 
@@ -121,9 +121,7 @@ public class SOMAService {
         OWLReasonerFactory reasonerFactory = new Reasoner.ReasonerFactory();
         OWLReasoner reasoner = reasonerFactory.createReasoner(ontology);
         reasoner.precomputeInferences();
-        //process classes
         ontology.classesInSignature().forEach(ontologyClass -> {
-            //gerar consulta com base nesses elementos e no neighbor
             if (query.length() > 0) {
                 query.append(UNION);
             }

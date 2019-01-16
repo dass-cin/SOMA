@@ -1,0 +1,608 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://edas#"
+     xml:base="http://edas"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://edas#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #attendeeAt -->
+
+
+    <owl:ObjectProperty rdf:about="#attendeeAt">
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:range rdf:resource="#ConferenceEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #belongsToEvent -->
+
+
+    <owl:ObjectProperty rdf:about="#belongsToEvent">
+        <rdfs:range rdf:resource="#ConferenceEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasAttendee -->
+
+
+    <owl:ObjectProperty rdf:about="#hasAttendee">
+        <rdfs:domain rdf:resource="#ConferenceEvent"/>
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasCountry -->
+
+
+    <owl:ObjectProperty rdf:about="#hasCountry">
+        <rdfs:domain rdf:resource="#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasLocation -->
+
+
+    <owl:ObjectProperty rdf:about="#hasLocation">
+        <rdfs:domain rdf:resource="#ConferenceEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasMember -->
+
+
+    <owl:ObjectProperty rdf:about="#hasMember">
+        <rdfs:domain rdf:resource="#Conference"/>
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasProgramme -->
+
+
+    <owl:ObjectProperty rdf:about="#hasProgramme">
+        <rdfs:domain rdf:resource="#ConferenceEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasRating -->
+
+
+    <owl:ObjectProperty rdf:about="#hasRating">
+        <rdfs:domain rdf:resource="#RatedPapers"/>
+        <rdfs:range rdf:resource="#ReviewRating"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasRelatedDocument -->
+
+
+    <owl:ObjectProperty rdf:about="#hasRelatedDocument">
+        <rdfs:range rdf:resource="#Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasRelatedPaper -->
+
+
+    <owl:ObjectProperty rdf:about="#hasRelatedPaper">
+        <rdfs:domain rdf:resource="#Author"/>
+        <rdfs:range rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasReviewHistory -->
+
+
+    <owl:ObjectProperty rdf:about="#hasReviewHistory">
+        <rdfs:domain rdf:resource="#Reviewer"/>
+        <rdfs:range rdf:resource="#PersonalReviewHistory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #initiates -->
+
+
+    <owl:ObjectProperty rdf:about="#initiates">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isInitiatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="#isInitiatedBy">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isLocationOf -->
+
+
+    <owl:ObjectProperty rdf:about="#isLocationOf">
+        <rdfs:range rdf:resource="#ConferenceEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isMemberOf -->
+
+
+    <owl:ObjectProperty rdf:about="#isMemberOf">
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:range rdf:resource="#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isReviewHistoryOf -->
+
+
+    <owl:ObjectProperty rdf:about="#isReviewHistoryOf">
+        <rdfs:domain rdf:resource="#PersonalReviewHistory"/>
+        <rdfs:range rdf:resource="#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isReviewedBy -->
+
+
+    <owl:ObjectProperty rdf:about="#isReviewedBy">
+        <rdfs:domain rdf:resource="#Paper"/>
+        <rdfs:range rdf:resource="#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isReviewing -->
+
+
+    <owl:ObjectProperty rdf:about="#isReviewing">
+        <rdfs:domain rdf:resource="#Reviewer"/>
+        <rdfs:range rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isWrittenBy -->
+
+
+    <owl:ObjectProperty rdf:about="#isWrittenBy">
+        <rdfs:domain rdf:resource="#Paper"/>
+        <rdfs:range rdf:resource="#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #relatedToEvent -->
+
+
+    <owl:ObjectProperty rdf:about="#relatedToEvent">
+        <rdfs:domain rdf:resource="#AcceptedPaper"/>
+        <rdfs:range rdf:resource="#PaperPresentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #relatedToPaper -->
+
+
+    <owl:ObjectProperty rdf:about="#relatedToPaper">
+        <rdfs:domain rdf:resource="#PaperPresentation"/>
+        <rdfs:range rdf:resource="#AcceptedPaper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #relatesTo -->
+
+
+    <owl:ObjectProperty rdf:about="#relatesTo">
+        <rdfs:domain rdf:resource="#Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #endDate -->
+
+
+    <owl:DatatypeProperty rdf:about="#endDate">
+        <rdfs:domain rdf:resource="#Conference"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #hasBiography -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasBiography">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #hasEmail -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasEmail">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #hasEndDateTime -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasEndDateTime">
+        <rdfs:domain rdf:resource="#ConferenceEvent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #hasFirstName -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasFirstName">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #hasLastName -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasLastName">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasName">
+        <rdfs:domain rdf:resource="#Conference"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #hasStartDateTime -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasStartDateTime">
+        <rdfs:domain rdf:resource="#ConferenceEvent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #manuscriptDueOn -->
+
+
+    <owl:DatatypeProperty rdf:about="#manuscriptDueOn">
+        <rdfs:domain rdf:resource="#Conference"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #paperDueOn -->
+
+
+    <owl:DatatypeProperty rdf:about="#paperDueOn">
+        <rdfs:domain rdf:resource="#Conference"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #registrationDueOn -->
+
+
+    <owl:DatatypeProperty rdf:about="#registrationDueOn">
+        <rdfs:domain rdf:resource="#Conference"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #startDate -->
+
+
+    <owl:DatatypeProperty rdf:about="#startDate">
+        <rdfs:domain rdf:resource="#Conference"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #AcceptedPaper -->
+
+
+    <owl:Class rdf:about="#AcceptedPaper"/>
+    
+
+
+    <!-- #ActivePaper -->
+
+
+    <owl:Class rdf:about="#ActivePaper"/>
+    
+
+
+    <!-- #Attendee -->
+
+
+    <owl:Class rdf:about="#Attendee"/>
+    
+
+
+    <!-- #Author -->
+
+
+    <owl:Class rdf:about="#Author">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+        <rdfs:subClassOf rdf:resource="#Presenter"/>
+    </owl:Class>
+    
+
+
+    <!-- #Conference -->
+
+
+    <owl:Class rdf:about="#Conference">
+        <rdfs:subClassOf rdf:resource="#SingleLevelConference"/>
+        <rdfs:subClassOf rdf:resource="#TwoLevelConference"/>
+        <rdfs:subClassOf rdf:resource="#owl:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- #ConferenceChair -->
+
+
+    <owl:Class rdf:about="#ConferenceChair"/>
+    
+
+
+    <!-- #ConferenceEvent -->
+
+
+    <owl:Class rdf:about="#ConferenceEvent"/>
+    
+
+
+    <!-- #Document -->
+
+
+    <owl:Class rdf:about="#Document">
+        <rdfs:subClassOf rdf:resource="#MealMenu"/>
+        <rdfs:subClassOf rdf:resource="#Paper"/>
+        <rdfs:subClassOf rdf:resource="#Programme"/>
+        <rdfs:subClassOf rdf:resource="#Review"/>
+        <rdfs:subClassOf rdf:resource="#SlideSet"/>
+        <rdfs:subClassOf rdf:resource="#owl:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- #MealMenu -->
+
+
+    <owl:Class rdf:about="#MealMenu"/>
+    
+
+
+    <!-- #Paper -->
+
+
+    <owl:Class rdf:about="#Paper">
+        <rdfs:subClassOf rdf:resource="#AcceptedPaper"/>
+        <rdfs:subClassOf rdf:resource="#ActivePaper"/>
+        <rdfs:subClassOf rdf:resource="#Document"/>
+        <rdfs:subClassOf rdf:resource="#PendingPaper"/>
+        <rdfs:subClassOf rdf:resource="#PublishedPaper"/>
+        <rdfs:subClassOf rdf:resource="#RejectedPaper"/>
+        <rdfs:subClassOf rdf:resource="#WithdrawnPaper"/>
+    </owl:Class>
+    
+
+
+    <!-- #PaperPresentation -->
+
+
+    <owl:Class rdf:about="#PaperPresentation"/>
+    
+
+
+    <!-- #PendingPaper -->
+
+
+    <owl:Class rdf:about="#PendingPaper"/>
+    
+
+
+    <!-- #Person -->
+
+
+    <owl:Class rdf:about="#Person">
+        <rdfs:subClassOf rdf:resource="#Attendee"/>
+        <rdfs:subClassOf rdf:resource="#Author"/>
+        <rdfs:subClassOf rdf:resource="#ConferenceChair"/>
+        <rdfs:subClassOf rdf:resource="#Reviewer"/>
+        <rdfs:subClassOf rdf:resource="#SessionChair"/>
+        <rdfs:subClassOf rdf:resource="#TPCMember"/>
+        <rdfs:subClassOf rdf:resource="#owl:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- #PersonalReviewHistory -->
+
+
+    <owl:Class rdf:about="#PersonalReviewHistory"/>
+    
+
+
+    <!-- #Presenter -->
+
+
+    <owl:Class rdf:about="#Presenter"/>
+    
+
+
+    <!-- #Programme -->
+
+
+    <owl:Class rdf:about="#Programme"/>
+    
+
+
+    <!-- #PublishedPaper -->
+
+
+    <owl:Class rdf:about="#PublishedPaper"/>
+    
+
+
+    <!-- #RatedPapers -->
+
+
+    <owl:Class rdf:about="#RatedPapers"/>
+    
+
+
+    <!-- #RejectedPaper -->
+
+
+    <owl:Class rdf:about="#RejectedPaper"/>
+    
+
+
+    <!-- #Review -->
+
+
+    <owl:Class rdf:about="#Review">
+        <rdfs:subClassOf rdf:resource="#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- #ReviewRating -->
+
+
+    <owl:Class rdf:about="#ReviewRating"/>
+    
+
+
+    <!-- #Reviewer -->
+
+
+    <owl:Class rdf:about="#Reviewer">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- #SessionChair -->
+
+
+    <owl:Class rdf:about="#SessionChair"/>
+    
+
+
+    <!-- #SingleLevelConference -->
+
+
+    <owl:Class rdf:about="#SingleLevelConference"/>
+    
+
+
+    <!-- #SlideSet -->
+
+
+    <owl:Class rdf:about="#SlideSet"/>
+    
+
+
+    <!-- #TPCMember -->
+
+
+    <owl:Class rdf:about="#TPCMember"/>
+    
+
+
+    <!-- #TwoLevelConference -->
+
+
+    <owl:Class rdf:about="#TwoLevelConference"/>
+    
+
+
+    <!-- #WithdrawnPaper -->
+
+
+    <owl:Class rdf:about="#WithdrawnPaper"/>
+    
+
+
+    <!-- #owl:Thing -->
+
+
+    <owl:Class rdf:about="#owl:Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.4.2018-01-04T07:01:37Z) https://github.com/owlcs/owlapi/ -->
+
+

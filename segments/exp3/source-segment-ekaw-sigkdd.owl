@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ekaw#"
+     xml:base="http://ekaw"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://ekaw#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #authorOf -->
+
+
+    <owl:ObjectProperty rdf:about="#authorOf">
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:range rdf:resource="#Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasReviewer -->
+
+
+    <owl:ObjectProperty rdf:about="#hasReviewer">
+        <rdfs:range rdf:resource="#Possible_Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #reviewWrittenBy -->
+
+
+    <owl:ObjectProperty rdf:about="#reviewWrittenBy">
+        <rdfs:range rdf:resource="#Possible_Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #reviewerOfPaper -->
+
+
+    <owl:ObjectProperty rdf:about="#reviewerOfPaper">
+        <rdfs:domain rdf:resource="#Possible_Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #writtenBy -->
+
+
+    <owl:ObjectProperty rdf:about="#writtenBy">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #Academic_Institution -->
+
+
+    <owl:Class rdf:about="#Academic_Institution"/>
+    
+
+
+    <!-- #Agency_Staff_Member -->
+
+
+    <owl:Class rdf:about="#Agency_Staff_Member">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- #Conference_Participant -->
+
+
+    <owl:Class rdf:about="#Conference_Participant">
+        <rdfs:subClassOf rdf:resource="#Demo_Chair"/>
+        <rdfs:subClassOf rdf:resource="#Early-Registered_Participant"/>
+        <rdfs:subClassOf rdf:resource="#Late-Registered_Participant"/>
+        <rdfs:subClassOf rdf:resource="#OC_Member"/>
+        <rdfs:subClassOf rdf:resource="#PC_Chair"/>
+        <rdfs:subClassOf rdf:resource="#Person"/>
+        <rdfs:subClassOf rdf:resource="#Presenter"/>
+        <rdfs:subClassOf rdf:resource="#Session_Chair"/>
+        <rdfs:subClassOf rdf:resource="#Tutorial_Chair"/>
+        <rdfs:subClassOf rdf:resource="#Workshop_Chair"/>
+    </owl:Class>
+    
+
+
+    <!-- #Conference_Proceedings -->
+
+
+    <owl:Class rdf:about="#Conference_Proceedings"/>
+    
+
+
+    <!-- #Demo_Chair -->
+
+
+    <owl:Class rdf:about="#Demo_Chair"/>
+    
+
+
+    <!-- #Document -->
+
+
+    <owl:Class rdf:about="#Document"/>
+    
+
+
+    <!-- #Early-Registered_Participant -->
+
+
+    <owl:Class rdf:about="#Early-Registered_Participant"/>
+    
+
+
+    <!-- #Late-Registered_Participant -->
+
+
+    <owl:Class rdf:about="#Late-Registered_Participant"/>
+    
+
+
+    <!-- #Multi-author_Volume -->
+
+
+    <owl:Class rdf:about="#Multi-author_Volume">
+        <rdfs:subClassOf rdf:resource="#Document"/>
+        <rdfs:subClassOf rdf:resource="#Proceedings"/>
+    </owl:Class>
+    
+
+
+    <!-- #OC_Member -->
+
+
+    <owl:Class rdf:about="#OC_Member"/>
+    
+
+
+    <!-- #PC_Chair -->
+
+
+    <owl:Class rdf:about="#PC_Chair"/>
+    
+
+
+    <!-- #PC_Member -->
+
+
+    <owl:Class rdf:about="#PC_Member"/>
+    
+
+
+    <!-- #Paper_Author -->
+
+
+    <owl:Class rdf:about="#Paper_Author">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- #Person -->
+
+
+    <owl:Class rdf:about="#Person">
+        <rdfs:subClassOf rdf:resource="#Agency_Staff_Member"/>
+        <rdfs:subClassOf rdf:resource="#Conference_Participant"/>
+        <rdfs:subClassOf rdf:resource="#Paper_Author"/>
+        <rdfs:subClassOf rdf:resource="#Possible_Reviewer"/>
+        <rdfs:subClassOf rdf:resource="#Student"/>
+        <rdfs:subClassOf rdf:resource="#owl:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- #Possible_Reviewer -->
+
+
+    <owl:Class rdf:about="#Possible_Reviewer">
+        <rdfs:subClassOf rdf:resource="#PC_Member"/>
+        <rdfs:subClassOf rdf:resource="#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- #Presenter -->
+
+
+    <owl:Class rdf:about="#Presenter"/>
+    
+
+
+    <!-- #Proceedings -->
+
+
+    <owl:Class rdf:about="#Proceedings">
+        <rdfs:subClassOf rdf:resource="#Conference_Proceedings"/>
+        <rdfs:subClassOf rdf:resource="#Multi-author_Volume"/>
+    </owl:Class>
+    
+
+
+    <!-- #Session_Chair -->
+
+
+    <owl:Class rdf:about="#Session_Chair"/>
+    
+
+
+    <!-- #Student -->
+
+
+    <owl:Class rdf:about="#Student">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- #Tutorial_Chair -->
+
+
+    <owl:Class rdf:about="#Tutorial_Chair"/>
+    
+
+
+    <!-- #University -->
+
+
+    <owl:Class rdf:about="#University">
+        <rdfs:subClassOf rdf:resource="#Academic_Institution"/>
+    </owl:Class>
+    
+
+
+    <!-- #Workshop_Chair -->
+
+
+    <owl:Class rdf:about="#Workshop_Chair"/>
+    
+
+
+    <!-- #owl:Thing -->
+
+
+    <owl:Class rdf:about="#owl:Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.4.2018-01-04T07:01:37Z) https://github.com/owlcs/owlapi/ -->
+
+

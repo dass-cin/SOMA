@@ -1,0 +1,353 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://edas#"
+     xml:base="http://edas"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://edas#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #attendeeAt -->
+
+
+    <owl:ObjectProperty rdf:about="#attendeeAt">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasAttendee -->
+
+
+    <owl:ObjectProperty rdf:about="#hasAttendee">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasMember -->
+
+
+    <owl:ObjectProperty rdf:about="#hasMember">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasRelatedPaper -->
+
+
+    <owl:ObjectProperty rdf:about="#hasRelatedPaper">
+        <rdfs:domain rdf:resource="#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasReviewHistory -->
+
+
+    <owl:ObjectProperty rdf:about="#hasReviewHistory">
+        <rdfs:range rdf:resource="#PersonalReviewHistory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #initiates -->
+
+
+    <owl:ObjectProperty rdf:about="#initiates">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isInitiatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="#isInitiatedBy">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isMemberOf -->
+
+
+    <owl:ObjectProperty rdf:about="#isMemberOf">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isProviderOf -->
+
+
+    <owl:ObjectProperty rdf:about="#isProviderOf">
+        <rdfs:domain rdf:resource="#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isReviewHistoryOf -->
+
+
+    <owl:ObjectProperty rdf:about="#isReviewHistoryOf">
+        <rdfs:domain rdf:resource="#PersonalReviewHistory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isWrittenBy -->
+
+
+    <owl:ObjectProperty rdf:about="#isWrittenBy">
+        <rdfs:range rdf:resource="#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #providedBy -->
+
+
+    <owl:ObjectProperty rdf:about="#providedBy">
+        <rdfs:range rdf:resource="#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #hasBiography -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasBiography">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #hasEmail -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasEmail">
+        <rdfs:domain rdf:resource="#ContactInformation"/>
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #hasFirstName -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasFirstName">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #hasLastName -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasLastName">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #hasPhone -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasPhone">
+        <rdfs:domain rdf:resource="#ContactInformation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #hasPostalCode -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasPostalCode">
+        <rdfs:domain rdf:resource="#ContactInformation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #hasStreet -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasStreet">
+        <rdfs:domain rdf:resource="#ContactInformation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #AcademiaOrganization -->
+
+
+    <owl:Class rdf:about="#AcademiaOrganization"/>
+    
+
+
+    <!-- #Attendee -->
+
+
+    <owl:Class rdf:about="#Attendee"/>
+    
+
+
+    <!-- #Author -->
+
+
+    <owl:Class rdf:about="#Author">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+        <rdfs:subClassOf rdf:resource="#Presenter"/>
+    </owl:Class>
+    
+
+
+    <!-- #ConferenceChair -->
+
+
+    <owl:Class rdf:about="#ConferenceChair"/>
+    
+
+
+    <!-- #ContactInformation -->
+
+
+    <owl:Class rdf:about="#ContactInformation"/>
+    
+
+
+    <!-- #GovernmentOrganization -->
+
+
+    <owl:Class rdf:about="#GovernmentOrganization"/>
+    
+
+
+    <!-- #IndustryOrganization -->
+
+
+    <owl:Class rdf:about="#IndustryOrganization"/>
+    
+
+
+    <!-- #NGO -->
+
+
+    <owl:Class rdf:about="#NGO"/>
+    
+
+
+    <!-- #Organization -->
+
+
+    <owl:Class rdf:about="#Organization">
+        <rdfs:subClassOf rdf:resource="#AcademiaOrganization"/>
+        <rdfs:subClassOf rdf:resource="#GovernmentOrganization"/>
+        <rdfs:subClassOf rdf:resource="#IndustryOrganization"/>
+        <rdfs:subClassOf rdf:resource="#NGO"/>
+        <rdfs:subClassOf rdf:resource="#owl:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- #Person -->
+
+
+    <owl:Class rdf:about="#Person">
+        <rdfs:subClassOf rdf:resource="#Attendee"/>
+        <rdfs:subClassOf rdf:resource="#Author"/>
+        <rdfs:subClassOf rdf:resource="#ConferenceChair"/>
+        <rdfs:subClassOf rdf:resource="#Reviewer"/>
+        <rdfs:subClassOf rdf:resource="#SessionChair"/>
+        <rdfs:subClassOf rdf:resource="#TPCMember"/>
+        <rdfs:subClassOf rdf:resource="#owl:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- #PersonalReviewHistory -->
+
+
+    <owl:Class rdf:about="#PersonalReviewHistory"/>
+    
+
+
+    <!-- #Presenter -->
+
+
+    <owl:Class rdf:about="#Presenter"/>
+    
+
+
+    <!-- #Reviewer -->
+
+
+    <owl:Class rdf:about="#Reviewer"/>
+    
+
+
+    <!-- #SessionChair -->
+
+
+    <owl:Class rdf:about="#SessionChair"/>
+    
+
+
+    <!-- #TPCMember -->
+
+
+    <owl:Class rdf:about="#TPCMember"/>
+    
+
+
+    <!-- #owl:Thing -->
+
+
+    <owl:Class rdf:about="#owl:Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.4.2018-01-04T07:01:37Z) https://github.com/owlcs/owlapi/ -->
+
+

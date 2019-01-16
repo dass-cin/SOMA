@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://cmt#"
+     xml:base="http://cmt"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://cmt#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #assignExternalReviewer -->
+
+
+    <owl:ObjectProperty rdf:about="#assignExternalReviewer">
+        <rdfs:range rdf:resource="#ExternalReviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #assignedByReviewer -->
+
+
+    <owl:ObjectProperty rdf:about="#assignedByReviewer">
+        <rdfs:domain rdf:resource="#ExternalReviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #co-writePaper -->
+
+
+    <owl:ObjectProperty rdf:about="#co-writePaper">
+        <rdfs:domain rdf:resource="#Co-author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasAuthor -->
+
+
+    <owl:ObjectProperty rdf:about="#hasAuthor">
+        <rdfs:domain rdf:resource="#Paper"/>
+        <rdfs:range rdf:resource="#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasCo-author -->
+
+
+    <owl:ObjectProperty rdf:about="#hasCo-author">
+        <rdfs:domain rdf:resource="#Paper"/>
+        <rdfs:range rdf:resource="#Co-author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasConferenceMember -->
+
+
+    <owl:ObjectProperty rdf:about="#hasConferenceMember">
+        <rdfs:range rdf:resource="#ConferenceMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasConflictOfInterest -->
+
+
+    <owl:ObjectProperty rdf:about="#hasConflictOfInterest">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #markConflictOfInterest -->
+
+
+    <owl:ObjectProperty rdf:about="#markConflictOfInterest">
+        <rdfs:domain rdf:resource="#ConferenceMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #memberOfConference -->
+
+
+    <owl:ObjectProperty rdf:about="#memberOfConference">
+        <rdfs:domain rdf:resource="#ConferenceMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #submitPaper -->
+
+
+    <owl:ObjectProperty rdf:about="#submitPaper">
+        <rdfs:domain rdf:resource="#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #writePaper -->
+
+
+    <owl:ObjectProperty rdf:about="#writePaper">
+        <rdfs:domain rdf:resource="#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #email -->
+
+
+    <owl:DatatypeProperty rdf:about="#email">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #name -->
+
+
+    <owl:DatatypeProperty rdf:about="#name">
+        <rdfs:domain rdf:resource="#Conference"/>
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #Administrator -->
+
+
+    <owl:Class rdf:about="#Administrator"/>
+    
+
+
+    <!-- #AssociatedChair -->
+
+
+    <owl:Class rdf:about="#AssociatedChair"/>
+    
+
+
+    <!-- #Author -->
+
+
+    <owl:Class rdf:about="#Author">
+        <rdfs:subClassOf rdf:resource="#AuthorNotReviewer"/>
+        <rdfs:subClassOf rdf:resource="#Co-author"/>
+        <rdfs:subClassOf rdf:resource="#ConferenceMember"/>
+        <rdfs:subClassOf rdf:resource="#User"/>
+    </owl:Class>
+    
+
+
+    <!-- #AuthorNotReviewer -->
+
+
+    <owl:Class rdf:about="#AuthorNotReviewer">
+        <rdfs:subClassOf rdf:resource="#Author"/>
+    </owl:Class>
+    
+
+
+    <!-- #Chairman -->
+
+
+    <owl:Class rdf:about="#Chairman">
+        <rdfs:subClassOf rdf:resource="#AssociatedChair"/>
+        <rdfs:subClassOf rdf:resource="#ConferenceChair"/>
+        <rdfs:subClassOf rdf:resource="#ConferenceMember"/>
+        <rdfs:subClassOf rdf:resource="#ProgramCommitteeChair"/>
+    </owl:Class>
+    
+
+
+    <!-- #Co-author -->
+
+
+    <owl:Class rdf:about="#Co-author">
+        <rdfs:subClassOf rdf:resource="#Author"/>
+    </owl:Class>
+    
+
+
+    <!-- #Conference -->
+
+
+    <owl:Class rdf:about="#Conference"/>
+    
+
+
+    <!-- #ConferenceChair -->
+
+
+    <owl:Class rdf:about="#ConferenceChair"/>
+    
+
+
+    <!-- #ConferenceMember -->
+
+
+    <owl:Class rdf:about="#ConferenceMember">
+        <rdfs:subClassOf rdf:resource="#Author"/>
+        <rdfs:subClassOf rdf:resource="#Chairman"/>
+        <rdfs:subClassOf rdf:resource="#Person"/>
+        <rdfs:subClassOf rdf:resource="#ProgramCommitteeMember"/>
+        <rdfs:subClassOf rdf:resource="#Reviewer"/>
+    </owl:Class>
+    
+
+
+    <!-- #ExternalReviewer -->
+
+
+    <owl:Class rdf:about="#ExternalReviewer">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- #Paper -->
+
+
+    <owl:Class rdf:about="#Paper"/>
+    
+
+
+    <!-- #Person -->
+
+
+    <owl:Class rdf:about="#Person">
+        <rdfs:subClassOf rdf:resource="#ConferenceMember"/>
+        <rdfs:subClassOf rdf:resource="#ExternalReviewer"/>
+        <rdfs:subClassOf rdf:resource="#User"/>
+        <rdfs:subClassOf rdf:resource="#owl:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- #ProgramCommitteeChair -->
+
+
+    <owl:Class rdf:about="#ProgramCommitteeChair"/>
+    
+
+
+    <!-- #ProgramCommitteeMember -->
+
+
+    <owl:Class rdf:about="#ProgramCommitteeMember"/>
+    
+
+
+    <!-- #Reviewer -->
+
+
+    <owl:Class rdf:about="#Reviewer"/>
+    
+
+
+    <!-- #User -->
+
+
+    <owl:Class rdf:about="#User">
+        <rdfs:subClassOf rdf:resource="#Administrator"/>
+        <rdfs:subClassOf rdf:resource="#Author"/>
+        <rdfs:subClassOf rdf:resource="#Person"/>
+        <rdfs:subClassOf rdf:resource="#Reviewer"/>
+    </owl:Class>
+    
+
+
+    <!-- #owl:Thing -->
+
+
+    <owl:Class rdf:about="#owl:Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.4.2018-01-04T07:01:37Z) https://github.com/owlcs/owlapi/ -->
+
+

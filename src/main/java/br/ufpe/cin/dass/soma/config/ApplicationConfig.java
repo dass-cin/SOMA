@@ -31,6 +31,16 @@ public class ApplicationConfig {
 
     private double matchingThreshold;
 
+    private boolean alignmentEnabled = false;
+
+    public boolean isAlignmentEnabled() {
+        return alignmentEnabled;
+    }
+
+    public void setAlignmentEnabled(boolean alignmentEnabled) {
+        this.alignmentEnabled = alignmentEnabled;
+    }
+
     public String getGenerationExtension() {
         return generationExtension;
     }

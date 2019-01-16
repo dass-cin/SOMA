@@ -1,0 +1,562 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://cmt#"
+     xml:base="http://cmt"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://cmt#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #acceptPaper -->
+
+
+    <owl:ObjectProperty rdf:about="#acceptPaper">
+        <rdfs:domain rdf:resource="#Administrator"/>
+        <rdfs:range rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #acceptedBy -->
+
+
+    <owl:ObjectProperty rdf:about="#acceptedBy">
+        <rdfs:domain rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #adjustBid -->
+
+
+    <owl:ObjectProperty rdf:about="#adjustBid">
+        <rdfs:domain rdf:resource="#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #adjustedBy -->
+
+
+    <owl:ObjectProperty rdf:about="#adjustedBy">
+        <rdfs:range rdf:resource="#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #assignExternalReviewer -->
+
+
+    <owl:ObjectProperty rdf:about="#assignExternalReviewer">
+        <rdfs:domain rdf:resource="#Reviewer"/>
+        <rdfs:range rdf:resource="#ExternalReviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #assignReviewer -->
+
+
+    <owl:ObjectProperty rdf:about="#assignReviewer">
+        <rdfs:domain rdf:resource="#Administrator"/>
+        <rdfs:range rdf:resource="#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #assignedByAdministrator -->
+
+
+    <owl:ObjectProperty rdf:about="#assignedByAdministrator">
+        <rdfs:domain rdf:resource="#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #assignedByReviewer -->
+
+
+    <owl:ObjectProperty rdf:about="#assignedByReviewer">
+        <rdfs:domain rdf:resource="#ExternalReviewer"/>
+        <rdfs:range rdf:resource="#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #assignedTo -->
+
+
+    <owl:ObjectProperty rdf:about="#assignedTo">
+        <rdfs:domain rdf:resource="#Paper"/>
+        <rdfs:range rdf:resource="#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #co-writePaper -->
+
+
+    <owl:ObjectProperty rdf:about="#co-writePaper">
+        <rdfs:domain rdf:resource="#Co-author"/>
+        <rdfs:range rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #finalizePaperAssignment -->
+
+
+    <owl:ObjectProperty rdf:about="#finalizePaperAssignment">
+        <rdfs:domain rdf:resource="#Administrator"/>
+        <rdfs:range rdf:resource="#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasAuthor -->
+
+
+    <owl:ObjectProperty rdf:about="#hasAuthor">
+        <rdfs:domain rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasBeenAssigned -->
+
+
+    <owl:ObjectProperty rdf:about="#hasBeenAssigned">
+        <rdfs:domain rdf:resource="#Reviewer"/>
+        <rdfs:range rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasBid -->
+
+
+    <owl:ObjectProperty rdf:about="#hasBid">
+        <rdfs:domain rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasCo-author -->
+
+
+    <owl:ObjectProperty rdf:about="#hasCo-author">
+        <rdfs:domain rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasConflictOfInterest -->
+
+
+    <owl:ObjectProperty rdf:about="#hasConflictOfInterest">
+        <rdfs:range rdf:resource="#Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasDecision -->
+
+
+    <owl:ObjectProperty rdf:about="#hasDecision">
+        <rdfs:domain rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasSubjectArea -->
+
+
+    <owl:ObjectProperty rdf:about="#hasSubjectArea">
+        <rdfs:domain rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #markConflictOfInterest -->
+
+
+    <owl:ObjectProperty rdf:about="#markConflictOfInterest">
+        <rdfs:range rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #paperAssignmentFinalizedBy -->
+
+
+    <owl:ObjectProperty rdf:about="#paperAssignmentFinalizedBy">
+        <rdfs:domain rdf:resource="#Conference"/>
+        <rdfs:range rdf:resource="#Administrator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #paperAssignmentToolsRunBy -->
+
+
+    <owl:ObjectProperty rdf:about="#paperAssignmentToolsRunBy">
+        <rdfs:domain rdf:resource="#Conference"/>
+        <rdfs:range rdf:resource="#Administrator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #readByMeta-Reviewer -->
+
+
+    <owl:ObjectProperty rdf:about="#readByMeta-Reviewer">
+        <rdfs:domain rdf:resource="#Paper"/>
+        <rdfs:range rdf:resource="#Meta-Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #readByReviewer -->
+
+
+    <owl:ObjectProperty rdf:about="#readByReviewer">
+        <rdfs:domain rdf:resource="#Paper"/>
+        <rdfs:range rdf:resource="#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #readPaper -->
+
+
+    <owl:ObjectProperty rdf:about="#readPaper">
+        <rdfs:domain rdf:resource="#Reviewer"/>
+        <rdfs:range rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #rejectPaper -->
+
+
+    <owl:ObjectProperty rdf:about="#rejectPaper">
+        <rdfs:domain rdf:resource="#Administrator"/>
+        <rdfs:range rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #rejectedBy -->
+
+
+    <owl:ObjectProperty rdf:about="#rejectedBy">
+        <rdfs:domain rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #reviewerBiddingStartedBy -->
+
+
+    <owl:ObjectProperty rdf:about="#reviewerBiddingStartedBy">
+        <rdfs:domain rdf:resource="#Conference"/>
+        <rdfs:range rdf:resource="#Administrator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #runPaperAssignmentTools -->
+
+
+    <owl:ObjectProperty rdf:about="#runPaperAssignmentTools">
+        <rdfs:domain rdf:resource="#Administrator"/>
+        <rdfs:range rdf:resource="#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #setMaxPapers -->
+
+
+    <owl:ObjectProperty rdf:about="#setMaxPapers">
+        <rdfs:domain rdf:resource="#Administrator"/>
+        <rdfs:range rdf:resource="#ProgramCommitteeMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #startReviewerBidding -->
+
+
+    <owl:ObjectProperty rdf:about="#startReviewerBidding">
+        <rdfs:domain rdf:resource="#Administrator"/>
+        <rdfs:range rdf:resource="#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #submitPaper -->
+
+
+    <owl:ObjectProperty rdf:about="#submitPaper">
+        <rdfs:domain rdf:resource="#Author"/>
+        <rdfs:range rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #writePaper -->
+
+
+    <owl:ObjectProperty rdf:about="#writePaper">
+        <rdfs:domain rdf:resource="#Author"/>
+        <rdfs:range rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #writeReview -->
+
+
+    <owl:ObjectProperty rdf:about="#writeReview">
+        <rdfs:domain rdf:resource="#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #writtenBy -->
+
+
+    <owl:ObjectProperty rdf:about="#writtenBy">
+        <rdfs:range rdf:resource="#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #maxPapers -->
+
+
+    <owl:DatatypeProperty rdf:about="#maxPapers">
+        <rdfs:domain rdf:resource="#ProgramCommitteeMember"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #paperID -->
+
+
+    <owl:DatatypeProperty rdf:about="#paperID">
+        <rdfs:domain rdf:resource="#Paper"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #reviewsPerPaper -->
+
+
+    <owl:DatatypeProperty rdf:about="#reviewsPerPaper">
+        <rdfs:domain rdf:resource="#Conference"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #title -->
+
+
+    <owl:DatatypeProperty rdf:about="#title">
+        <rdfs:domain rdf:resource="#Paper"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #Administrator -->
+
+
+    <owl:Class rdf:about="#Administrator"/>
+    
+
+
+    <!-- #Author -->
+
+
+    <owl:Class rdf:about="#Author"/>
+    
+
+
+    <!-- #AuthorNotReviewer -->
+
+
+    <owl:Class rdf:about="#AuthorNotReviewer">
+        <rdfs:subClassOf rdf:resource="#Author"/>
+    </owl:Class>
+    
+
+
+    <!-- #Co-author -->
+
+
+    <owl:Class rdf:about="#Co-author"/>
+    
+
+
+    <!-- #Conference -->
+
+
+    <owl:Class rdf:about="#Conference"/>
+    
+
+
+    <!-- #ConferenceMember -->
+
+
+    <owl:Class rdf:about="#ConferenceMember"/>
+    
+
+
+    <!-- #Document -->
+
+
+    <owl:Class rdf:about="#Document">
+        <rdfs:subClassOf rdf:resource="#Paper"/>
+        <rdfs:subClassOf rdf:resource="#Review"/>
+        <rdfs:subClassOf rdf:resource="#owl:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- #ExternalReviewer -->
+
+
+    <owl:Class rdf:about="#ExternalReviewer">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- #Meta-Reviewer -->
+
+
+    <owl:Class rdf:about="#Meta-Reviewer">
+        <rdfs:subClassOf rdf:resource="#Reviewer"/>
+    </owl:Class>
+    
+
+
+    <!-- #Paper -->
+
+
+    <owl:Class rdf:about="#Paper">
+        <rdfs:subClassOf rdf:resource="#Document"/>
+        <rdfs:subClassOf rdf:resource="#PaperAbstract"/>
+        <rdfs:subClassOf rdf:resource="#PaperFullVersion"/>
+    </owl:Class>
+    
+
+
+    <!-- #PaperAbstract -->
+
+
+    <owl:Class rdf:about="#PaperAbstract">
+        <rdfs:subClassOf rdf:resource="#Paper"/>
+    </owl:Class>
+    
+
+
+    <!-- #PaperFullVersion -->
+
+
+    <owl:Class rdf:about="#PaperFullVersion">
+        <rdfs:subClassOf rdf:resource="#Paper"/>
+    </owl:Class>
+    
+
+
+    <!-- #Person -->
+
+
+    <owl:Class rdf:about="#Person"/>
+    
+
+
+    <!-- #ProgramCommitteeMember -->
+
+
+    <owl:Class rdf:about="#ProgramCommitteeMember"/>
+    
+
+
+    <!-- #Review -->
+
+
+    <owl:Class rdf:about="#Review"/>
+    
+
+
+    <!-- #Reviewer -->
+
+
+    <owl:Class rdf:about="#Reviewer">
+        <rdfs:subClassOf rdf:resource="#ConferenceMember"/>
+        <rdfs:subClassOf rdf:resource="#Meta-Reviewer"/>
+        <rdfs:subClassOf rdf:resource="#User"/>
+    </owl:Class>
+    
+
+
+    <!-- #User -->
+
+
+    <owl:Class rdf:about="#User"/>
+    
+
+
+    <!-- #owl:Thing -->
+
+
+    <owl:Class rdf:about="#owl:Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.4.2018-01-04T07:01:37Z) https://github.com/owlcs/owlapi/ -->
+
+

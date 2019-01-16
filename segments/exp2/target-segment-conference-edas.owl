@@ -1,0 +1,575 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://edas#"
+     xml:base="http://edas"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://edas#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #attendeeAt -->
+
+
+    <owl:ObjectProperty rdf:about="#attendeeAt">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasAttendee -->
+
+
+    <owl:ObjectProperty rdf:about="#hasAttendee">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasMember -->
+
+
+    <owl:ObjectProperty rdf:about="#hasMember">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasRating -->
+
+
+    <owl:ObjectProperty rdf:about="#hasRating">
+        <rdfs:domain rdf:resource="#RatedPapers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasRelatedPaper -->
+
+
+    <owl:ObjectProperty rdf:about="#hasRelatedPaper">
+        <rdfs:range rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasReviewHistory -->
+
+
+    <owl:ObjectProperty rdf:about="#hasReviewHistory">
+        <rdfs:domain rdf:resource="#Reviewer"/>
+        <rdfs:range rdf:resource="#PersonalReviewHistory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #hasTopic -->
+
+
+    <owl:ObjectProperty rdf:about="#hasTopic">
+        <rdfs:range rdf:resource="#Topic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #initiates -->
+
+
+    <owl:ObjectProperty rdf:about="#initiates">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isInitiatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="#isInitiatedBy">
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isMemberOf -->
+
+
+    <owl:ObjectProperty rdf:about="#isMemberOf">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isReviewHistoryOf -->
+
+
+    <owl:ObjectProperty rdf:about="#isReviewHistoryOf">
+        <rdfs:domain rdf:resource="#PersonalReviewHistory"/>
+        <rdfs:range rdf:resource="#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isReviewedBy -->
+
+
+    <owl:ObjectProperty rdf:about="#isReviewedBy">
+        <rdfs:domain rdf:resource="#Paper"/>
+        <rdfs:range rdf:resource="#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isReviewing -->
+
+
+    <owl:ObjectProperty rdf:about="#isReviewing">
+        <rdfs:domain rdf:resource="#Reviewer"/>
+        <rdfs:range rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isTopicOf -->
+
+
+    <owl:ObjectProperty rdf:about="#isTopicOf">
+        <rdfs:domain rdf:resource="#Topic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #isWrittenBy -->
+
+
+    <owl:ObjectProperty rdf:about="#isWrittenBy">
+        <rdfs:domain rdf:resource="#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #relatedToEvent -->
+
+
+    <owl:ObjectProperty rdf:about="#relatedToEvent">
+        <rdfs:domain rdf:resource="#AcceptedPaper"/>
+        <rdfs:range rdf:resource="#PaperPresentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #relatedToPaper -->
+
+
+    <owl:ObjectProperty rdf:about="#relatedToPaper">
+        <rdfs:domain rdf:resource="#PaperPresentation"/>
+        <rdfs:range rdf:resource="#AcceptedPaper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #hasBiography -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasBiography">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #hasEmail -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasEmail">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #hasFirstName -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasFirstName">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #hasLastName -->
+
+
+    <owl:DatatypeProperty rdf:about="#hasLastName">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #AcceptedPaper -->
+
+
+    <owl:Class rdf:about="#AcceptedPaper"/>
+    
+
+
+    <!-- #ActivePaper -->
+
+
+    <owl:Class rdf:about="#ActivePaper"/>
+    
+
+
+    <!-- #AntennasTopic -->
+
+
+    <owl:Class rdf:about="#AntennasTopic"/>
+    
+
+
+    <!-- #Attendee -->
+
+
+    <owl:Class rdf:about="#Attendee"/>
+    
+
+
+    <!-- #Author -->
+
+
+    <owl:Class rdf:about="#Author"/>
+    
+
+
+    <!-- #CADTopic -->
+
+
+    <owl:Class rdf:about="#CADTopic"/>
+    
+
+
+    <!-- #CommunicationTheoryTopic -->
+
+
+    <owl:Class rdf:about="#CommunicationTheoryTopic"/>
+    
+
+
+    <!-- #CommunicationsTopic -->
+
+
+    <owl:Class rdf:about="#CommunicationsTopic"/>
+    
+
+
+    <!-- #ComputerArchitectureTopic -->
+
+
+    <owl:Class rdf:about="#ComputerArchitectureTopic"/>
+    
+
+
+    <!-- #ComputerNetworksTopic -->
+
+
+    <owl:Class rdf:about="#ComputerNetworksTopic"/>
+    
+
+
+    <!-- #ConferenceChair -->
+
+
+    <owl:Class rdf:about="#ConferenceChair"/>
+    
+
+
+    <!-- #CryptographyTopic -->
+
+
+    <owl:Class rdf:about="#CryptographyTopic"/>
+    
+
+
+    <!-- #Document -->
+
+
+    <owl:Class rdf:about="#Document"/>
+    
+
+
+    <!-- #MedicineTopic -->
+
+
+    <owl:Class rdf:about="#MedicineTopic"/>
+    
+
+
+    <!-- #MicroelectronicsTopic -->
+
+
+    <owl:Class rdf:about="#MicroelectronicsTopic"/>
+    
+
+
+    <!-- #MobileComputingTopic -->
+
+
+    <owl:Class rdf:about="#MobileComputingTopic"/>
+    
+
+
+    <!-- #MultimediaTopic -->
+
+
+    <owl:Class rdf:about="#MultimediaTopic"/>
+    
+
+
+    <!-- #OperatingTopicsystems -->
+
+
+    <owl:Class rdf:about="#OperatingTopicsystems"/>
+    
+
+
+    <!-- #Paper -->
+
+
+    <owl:Class rdf:about="#Paper">
+        <rdfs:subClassOf rdf:resource="#AcceptedPaper"/>
+        <rdfs:subClassOf rdf:resource="#ActivePaper"/>
+        <rdfs:subClassOf rdf:resource="#Document"/>
+        <rdfs:subClassOf rdf:resource="#PendingPaper"/>
+        <rdfs:subClassOf rdf:resource="#PublishedPaper"/>
+        <rdfs:subClassOf rdf:resource="#RejectedPaper"/>
+        <rdfs:subClassOf rdf:resource="#WithdrawnPaper"/>
+    </owl:Class>
+    
+
+
+    <!-- #PaperPresentation -->
+
+
+    <owl:Class rdf:about="#PaperPresentation"/>
+    
+
+
+    <!-- #ParallelAndDistributedComputingTopic -->
+
+
+    <owl:Class rdf:about="#ParallelAndDistributedComputingTopic"/>
+    
+
+
+    <!-- #PendingPaper -->
+
+
+    <owl:Class rdf:about="#PendingPaper"/>
+    
+
+
+    <!-- #PerformanceTopic -->
+
+
+    <owl:Class rdf:about="#PerformanceTopic"/>
+    
+
+
+    <!-- #Person -->
+
+
+    <owl:Class rdf:about="#Person">
+        <rdfs:subClassOf rdf:resource="#Attendee"/>
+        <rdfs:subClassOf rdf:resource="#Author"/>
+        <rdfs:subClassOf rdf:resource="#ConferenceChair"/>
+        <rdfs:subClassOf rdf:resource="#Reviewer"/>
+        <rdfs:subClassOf rdf:resource="#SessionChair"/>
+        <rdfs:subClassOf rdf:resource="#TPCMember"/>
+        <rdfs:subClassOf rdf:resource="#owl:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- #PersonalReviewHistory -->
+
+
+    <owl:Class rdf:about="#PersonalReviewHistory"/>
+    
+
+
+    <!-- #PowerlineTransmissionTopic -->
+
+
+    <owl:Class rdf:about="#PowerlineTransmissionTopic"/>
+    
+
+
+    <!-- #PublishedPaper -->
+
+
+    <owl:Class rdf:about="#PublishedPaper"/>
+    
+
+
+    <!-- #RadioCommunicationsTopic -->
+
+
+    <owl:Class rdf:about="#RadioCommunicationsTopic"/>
+    
+
+
+    <!-- #RatedPapers -->
+
+
+    <owl:Class rdf:about="#RatedPapers"/>
+    
+
+
+    <!-- #RejectedPaper -->
+
+
+    <owl:Class rdf:about="#RejectedPaper"/>
+    
+
+
+    <!-- #Reviewer -->
+
+
+    <owl:Class rdf:about="#Reviewer">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- #SatelliteAndSpaceCommunicationsTopic -->
+
+
+    <owl:Class rdf:about="#SatelliteAndSpaceCommunicationsTopic"/>
+    
+
+
+    <!-- #SecurityTopic -->
+
+
+    <owl:Class rdf:about="#SecurityTopic"/>
+    
+
+
+    <!-- #SessionChair -->
+
+
+    <owl:Class rdf:about="#SessionChair"/>
+    
+
+
+    <!-- #SignalProcessingTopic -->
+
+
+    <owl:Class rdf:about="#SignalProcessingTopic"/>
+    
+
+
+    <!-- #TPCMember -->
+
+
+    <owl:Class rdf:about="#TPCMember"/>
+    
+
+
+    <!-- #TestOnlyTopic -->
+
+
+    <owl:Class rdf:about="#TestOnlyTopic"/>
+    
+
+
+    <!-- #Topic -->
+
+
+    <owl:Class rdf:about="#Topic">
+        <rdfs:subClassOf rdf:resource="#AntennasTopic"/>
+        <rdfs:subClassOf rdf:resource="#CADTopic"/>
+        <rdfs:subClassOf rdf:resource="#CommunicationTheoryTopic"/>
+        <rdfs:subClassOf rdf:resource="#CommunicationsTopic"/>
+        <rdfs:subClassOf rdf:resource="#ComputerArchitectureTopic"/>
+        <rdfs:subClassOf rdf:resource="#ComputerNetworksTopic"/>
+        <rdfs:subClassOf rdf:resource="#CryptographyTopic"/>
+        <rdfs:subClassOf rdf:resource="#MedicineTopic"/>
+        <rdfs:subClassOf rdf:resource="#MicroelectronicsTopic"/>
+        <rdfs:subClassOf rdf:resource="#MobileComputingTopic"/>
+        <rdfs:subClassOf rdf:resource="#MultimediaTopic"/>
+        <rdfs:subClassOf rdf:resource="#OperatingTopicsystems"/>
+        <rdfs:subClassOf rdf:resource="#ParallelAndDistributedComputingTopic"/>
+        <rdfs:subClassOf rdf:resource="#PerformanceTopic"/>
+        <rdfs:subClassOf rdf:resource="#PowerlineTransmissionTopic"/>
+        <rdfs:subClassOf rdf:resource="#RadioCommunicationsTopic"/>
+        <rdfs:subClassOf rdf:resource="#SatelliteAndSpaceCommunicationsTopic"/>
+        <rdfs:subClassOf rdf:resource="#SecurityTopic"/>
+        <rdfs:subClassOf rdf:resource="#SignalProcessingTopic"/>
+        <rdfs:subClassOf rdf:resource="#TestOnlyTopic"/>
+        <rdfs:subClassOf rdf:resource="#WirelessCommunicationsTopic"/>
+        <rdfs:subClassOf rdf:resource="#owl:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- #WirelessCommunicationsTopic -->
+
+
+    <owl:Class rdf:about="#WirelessCommunicationsTopic"/>
+    
+
+
+    <!-- #WithdrawnPaper -->
+
+
+    <owl:Class rdf:about="#WithdrawnPaper"/>
+    
+
+
+    <!-- #owl:Thing -->
+
+
+    <owl:Class rdf:about="#owl:Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.4.2018-01-04T07:01:37Z) https://github.com/owlcs/owlapi/ -->
+
+

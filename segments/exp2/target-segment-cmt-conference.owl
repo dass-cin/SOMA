@@ -1,0 +1,678 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://conference#"
+     xml:base="http://conference"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://conference#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #belong_to_a_conference_volume -->
+
+
+    <owl:ObjectProperty rdf:about="#belong_to_a_conference_volume">
+        <rdfs:range rdf:resource="#Conference_volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #belongs_to_a_review_reference -->
+
+
+    <owl:ObjectProperty rdf:about="#belongs_to_a_review_reference">
+        <rdfs:range rdf:resource="#Review_preference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #belongs_to_reviewers -->
+
+
+    <owl:ObjectProperty rdf:about="#belongs_to_reviewers">
+        <rdfs:range rdf:resource="#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #contributes -->
+
+
+    <owl:ObjectProperty rdf:about="#contributes">
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:range rdf:resource="#Conference_document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_a_commtitee -->
+
+
+    <owl:ObjectProperty rdf:about="#has_a_commtitee">
+        <rdfs:domain rdf:resource="#Conference_volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_a_program_committee -->
+
+
+    <owl:ObjectProperty rdf:about="#has_a_program_committee">
+        <rdfs:domain rdf:resource="#Conference_volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_a_publisher -->
+
+
+    <owl:ObjectProperty rdf:about="#has_a_publisher">
+        <rdfs:domain rdf:resource="#Conference_proceedings"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_a_review -->
+
+
+    <owl:ObjectProperty rdf:about="#has_a_review">
+        <rdfs:domain rdf:resource="#Reviewed_contribution"/>
+        <rdfs:range rdf:resource="#Review"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_a_review_expertise -->
+
+
+    <owl:ObjectProperty rdf:about="#has_a_review_expertise">
+        <rdfs:range rdf:resource="#Review_expertise"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_a_review_reference_or_expertise -->
+
+
+    <owl:ObjectProperty rdf:about="#has_a_review_reference_or_expertise">
+        <rdfs:domain rdf:resource="#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_a_steering_committee -->
+
+
+    <owl:ObjectProperty rdf:about="#has_a_steering_committee">
+        <rdfs:domain rdf:resource="#Conference_volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_a_submitted_contribution -->
+
+
+    <owl:ObjectProperty rdf:about="#has_a_submitted_contribution">
+        <rdfs:domain rdf:resource="#Review_expertise"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_a_topic_or_a_submission_contribution -->
+
+
+    <owl:ObjectProperty rdf:about="#has_a_topic_or_a_submission_contribution">
+        <rdfs:domain rdf:resource="#Review_preference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_a_track-workshop-tutorial_chair -->
+
+
+    <owl:ObjectProperty rdf:about="#has_a_track-workshop-tutorial_chair">
+        <rdfs:domain rdf:resource="#Conference_part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_a_track-workshop-tutorial_topic -->
+
+
+    <owl:ObjectProperty rdf:about="#has_a_track-workshop-tutorial_topic">
+        <rdfs:domain rdf:resource="#Conference_part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_an_abstract -->
+
+
+    <owl:ObjectProperty rdf:about="#has_an_abstract">
+        <rdfs:domain rdf:resource="#Conference_contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_an_organizing_committee -->
+
+
+    <owl:ObjectProperty rdf:about="#has_an_organizing_committee">
+        <rdfs:domain rdf:resource="#Conference_volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_authors -->
+
+
+    <owl:ObjectProperty rdf:about="#has_authors">
+        <rdfs:domain rdf:resource="#Conference_document"/>
+        <rdfs:range rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_been_assigned_a_review_reference -->
+
+
+    <owl:ObjectProperty rdf:about="#has_been_assigned_a_review_reference">
+        <rdfs:range rdf:resource="#Review_preference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_contributions -->
+
+
+    <owl:ObjectProperty rdf:about="#has_contributions">
+        <rdfs:domain rdf:resource="#Conference_volume"/>
+        <rdfs:range rdf:resource="#Conference_contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_important_dates -->
+
+
+    <owl:ObjectProperty rdf:about="#has_important_dates">
+        <rdfs:domain rdf:resource="#Conference_volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_parts -->
+
+
+    <owl:ObjectProperty rdf:about="#has_parts">
+        <rdfs:domain rdf:resource="#Conference_volume"/>
+        <rdfs:range rdf:resource="#Conference_part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_tracks -->
+
+
+    <owl:ObjectProperty rdf:about="#has_tracks">
+        <rdfs:domain rdf:resource="#Conference_volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_tutorials -->
+
+
+    <owl:ObjectProperty rdf:about="#has_tutorials">
+        <rdfs:domain rdf:resource="#Conference_volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #has_workshops -->
+
+
+    <owl:ObjectProperty rdf:about="#has_workshops">
+        <rdfs:domain rdf:resource="#Conference_volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #invited_by -->
+
+
+    <owl:ObjectProperty rdf:about="#invited_by">
+        <rdfs:domain rdf:resource="#Reviewer"/>
+        <rdfs:range rdf:resource="#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #invites_co-reviewers -->
+
+
+    <owl:ObjectProperty rdf:about="#invites_co-reviewers">
+        <rdfs:domain rdf:resource="#Reviewer"/>
+        <rdfs:range rdf:resource="#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #is_a_topis_of_conference_parts -->
+
+
+    <owl:ObjectProperty rdf:about="#is_a_topis_of_conference_parts">
+        <rdfs:range rdf:resource="#Conference_part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #is_part_of_conference_volumes -->
+
+
+    <owl:ObjectProperty rdf:about="#is_part_of_conference_volumes">
+        <rdfs:domain rdf:resource="#Conference_part"/>
+        <rdfs:range rdf:resource="#Conference_volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #is_submitted_at -->
+
+
+    <owl:ObjectProperty rdf:about="#is_submitted_at">
+        <rdfs:domain rdf:resource="#Conference_contribution"/>
+        <rdfs:range rdf:resource="#Conference_volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #is_the_1th_part_of -->
+
+
+    <owl:ObjectProperty rdf:about="#is_the_1th_part_of">
+        <rdfs:range rdf:resource="#Conference_contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #issues -->
+
+
+    <owl:ObjectProperty rdf:about="#issues">
+        <rdfs:range rdf:resource="#Conference_proceedings"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #reviews -->
+
+
+    <owl:ObjectProperty rdf:about="#reviews">
+        <rdfs:domain rdf:resource="#Review"/>
+        <rdfs:range rdf:resource="#Reviewed_contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #was_a_committee_of -->
+
+
+    <owl:ObjectProperty rdf:about="#was_a_committee_of">
+        <rdfs:range rdf:resource="#Conference_volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #was_a_program_committee_of -->
+
+
+    <owl:ObjectProperty rdf:about="#was_a_program_committee_of">
+        <rdfs:range rdf:resource="#Conference_volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #was_a_steering_committee_of -->
+
+
+    <owl:ObjectProperty rdf:about="#was_a_steering_committee_of">
+        <rdfs:range rdf:resource="#Conference_volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #was_a_track-workshop_chair_of -->
+
+
+    <owl:ObjectProperty rdf:about="#was_a_track-workshop_chair_of">
+        <rdfs:range rdf:resource="#Conference_part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- #was_an_organizing_committee_of -->
+
+
+    <owl:ObjectProperty rdf:about="#was_an_organizing_committee_of">
+        <rdfs:range rdf:resource="#Conference_volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #has_a_URL -->
+
+
+    <owl:DatatypeProperty rdf:about="#has_a_URL">
+        <rdfs:domain rdf:resource="#Conference_www"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #has_a_date_of_issue -->
+
+
+    <owl:DatatypeProperty rdf:about="#has_a_date_of_issue">
+        <rdfs:domain rdf:resource="#Conference_document"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #has_a_degree -->
+
+
+    <owl:DatatypeProperty rdf:about="#has_a_degree">
+        <rdfs:domain rdf:resource="#Review_preference"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #has_a_location -->
+
+
+    <owl:DatatypeProperty rdf:about="#has_a_location">
+        <rdfs:domain rdf:resource="#Conference_volume"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #has_a_name -->
+
+
+    <owl:DatatypeProperty rdf:about="#has_a_name">
+        <rdfs:domain rdf:resource="#Conference"/>
+        <rdfs:domain rdf:resource="#Conference_part"/>
+        <rdfs:domain rdf:resource="#Conference_proceedings"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #has_a_volume -->
+
+
+    <owl:DatatypeProperty rdf:about="#has_a_volume">
+        <rdfs:domain rdf:resource="#Conference_proceedings"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #has_an_ISBN -->
+
+
+    <owl:DatatypeProperty rdf:about="#has_an_ISBN">
+        <rdfs:domain rdf:resource="#Conference_proceedings"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #has_an_email -->
+
+
+    <owl:DatatypeProperty rdf:about="#has_an_email">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #has_an_expertise -->
+
+
+    <owl:DatatypeProperty rdf:about="#has_an_expertise">
+        <rdfs:domain rdf:resource="#Review_expertise"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #has_gender -->
+
+
+    <owl:DatatypeProperty rdf:about="#has_gender">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #has_the_first_name -->
+
+
+    <owl:DatatypeProperty rdf:about="#has_the_first_name">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- #has_the_last_name -->
+
+
+    <owl:DatatypeProperty rdf:about="#has_the_last_name">
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- #Committee_member -->
+
+
+    <owl:Class rdf:about="#Committee_member"/>
+    
+
+
+    <!-- #Conference -->
+
+
+    <owl:Class rdf:about="#Conference">
+        <rdfs:subClassOf rdf:resource="#Conference_volume"/>
+        <rdfs:subClassOf rdf:resource="#owl:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- #Conference_applicant -->
+
+
+    <owl:Class rdf:about="#Conference_applicant"/>
+    
+
+
+    <!-- #Conference_contribution -->
+
+
+    <owl:Class rdf:about="#Conference_contribution"/>
+    
+
+
+    <!-- #Conference_contributor -->
+
+
+    <owl:Class rdf:about="#Conference_contributor"/>
+    
+
+
+    <!-- #Conference_document -->
+
+
+    <owl:Class rdf:about="#Conference_document"/>
+    
+
+
+    <!-- #Conference_part -->
+
+
+    <owl:Class rdf:about="#Conference_part"/>
+    
+
+
+    <!-- #Conference_participant -->
+
+
+    <owl:Class rdf:about="#Conference_participant"/>
+    
+
+
+    <!-- #Conference_proceedings -->
+
+
+    <owl:Class rdf:about="#Conference_proceedings"/>
+    
+
+
+    <!-- #Conference_volume -->
+
+
+    <owl:Class rdf:about="#Conference_volume"/>
+    
+
+
+    <!-- #Conference_www -->
+
+
+    <owl:Class rdf:about="#Conference_www"/>
+    
+
+
+    <!-- #Paper -->
+
+
+    <owl:Class rdf:about="#Paper">
+        <rdfs:subClassOf rdf:resource="#Regular_contribution"/>
+    </owl:Class>
+    
+
+
+    <!-- #Person -->
+
+
+    <owl:Class rdf:about="#Person">
+        <rdfs:subClassOf rdf:resource="#Committee_member"/>
+        <rdfs:subClassOf rdf:resource="#Conference_applicant"/>
+        <rdfs:subClassOf rdf:resource="#Conference_contributor"/>
+        <rdfs:subClassOf rdf:resource="#Conference_participant"/>
+        <rdfs:subClassOf rdf:resource="#Reviewer"/>
+        <rdfs:subClassOf rdf:resource="#Track-workshop_chair"/>
+        <rdfs:subClassOf rdf:resource="#owl:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- #Regular_contribution -->
+
+
+    <owl:Class rdf:about="#Regular_contribution"/>
+    
+
+
+    <!-- #Review -->
+
+
+    <owl:Class rdf:about="#Review">
+        <rdfs:subClassOf rdf:resource="#Conference_document"/>
+    </owl:Class>
+    
+
+
+    <!-- #Review_expertise -->
+
+
+    <owl:Class rdf:about="#Review_expertise"/>
+    
+
+
+    <!-- #Review_preference -->
+
+
+    <owl:Class rdf:about="#Review_preference"/>
+    
+
+
+    <!-- #Reviewed_contribution -->
+
+
+    <owl:Class rdf:about="#Reviewed_contribution"/>
+    
+
+
+    <!-- #Reviewer -->
+
+
+    <owl:Class rdf:about="#Reviewer">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- #Track-workshop_chair -->
+
+
+    <owl:Class rdf:about="#Track-workshop_chair"/>
+    
+
+
+    <!-- #owl:Thing -->
+
+
+    <owl:Class rdf:about="#owl:Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.4.2018-01-04T07:01:37Z) https://github.com/owlcs/owlapi/ -->
+
+

@@ -48,7 +48,7 @@ public class SOMATest {
     @Test
     public void shouldGenerateOntologySegment() throws URISyntaxException {
 
-        URI sourceOntology = new URI("/Users/diegopessoa/Projects/doutorado/ontologies/conference/cmt.owl");
+        URI sourceOntology = new URI("/Users/diegopessoa/Projects/phd/ontologies/conference/cmt.owl");
 
         Set<String> keywords = Arrays.asList(new String[]{ "document", "title", "abstract" }).stream().collect(Collectors.toSet());
 
@@ -63,7 +63,7 @@ public class SOMATest {
     @Test
     public void shouldGenerateOntologySegment2() throws URISyntaxException {
 
-        URI sourceOntology = new URI("/Users/diegopessoa/Projects/doutorado/ontologies/conference/cmt.owl");
+        URI sourceOntology = new URI("/Users/diegopessoa/Projects/phd/ontologies/conference/cmt.owl");
 
         Set<String> keywords = Arrays.asList(new String[]{ "author", "email", "participant", "name", "presentation" }).stream().collect(Collectors.toSet());
 
@@ -79,7 +79,7 @@ public class SOMATest {
 //        URI sourceOntologySegment = new URI("/tmp/source-segment-cmt-Conference.owl");
         URI sourceOntologySegment = new URI("/tmp/cmt-source-segment.owl");
 
-        URI targetOntology = new URI("/Users/diegopessoa/Projects/doutorado/ontologies/conference/Conference.owl");
+        URI targetOntology = new URI("/Users/diegopessoa/Projects/phd/ontologies/conference/Conference.owl");
 
         String segmentQuery = somaService.generateTargetOntologySegmentQuery(sourceOntologySegment, targetOntology, SOMAService.SegmentGenerationExtension.SIMPLE);
 
